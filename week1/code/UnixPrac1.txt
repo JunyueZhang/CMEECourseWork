@@ -1,0 +1,16 @@
+
+~/Documents/CMEECourseWork/week1/data/fasta$ wc -l 407228326.fasta  #1
+
+~/Documents/CMEECourseWork/week1/data/fasta$ wc -l 407228412.fasta  #1
+
+~/Documents/CMEECourseWork/week1/data/fasta$ wc -l E.coli.fasta  #1
+
+~/Documents/CMEECourseWork/week1/data/fasta$ cat E.coli.fasta | awk 'NR!=1' E.coli.fasta #2
+
+~/Documents/CMEECourseWork/week1/data/fasta$ wc -m  E.coli.fasta #3
+
+~/Documents/CMEECourseWork/week1/data/fasta$ cat E.coli.fasta | sed '1d' E.coli.fasta |tr -d '[ \n]' | grep -o ATGC E.coli.fasta | wc -l #4
+
+~/Documents/CMEECourseWork/week1/code$ numA = `tail -n +2 ../data/fasta/E.coli.fasta | grep -o A | wc -l`; T = `tail -n +2 ../data/fasta/E.coli.fasta | grep -o T | wc -l`; numG = `tail -n +2 ../data/fasta/E.coli.fasta | grep -o G | wc -l`; numC = `tail -n +2 ../data/fasta/E.coli.fasta | grep -o C | wc -l`; numAT = `expr $numA + $nmT`; numGC = `expr $numG + $numC'; r = `echo "scale = 3; $numAT / $numGC" | bc`; echo "This answer is $r"
+
+
