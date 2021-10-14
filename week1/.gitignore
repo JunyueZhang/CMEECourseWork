@@ -1,0 +1,6 @@
+*~ 
+*.tmp
+sandbox/*
+!sandbox/.gitkeep
+results/*
+!results/.gitkeep
