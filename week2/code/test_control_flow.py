@@ -12,7 +12,7 @@ __version__ = '0.0.1'
 ## imports ##
 import sys # # module to interface our program with the operating system
 import doctest
-from typing import NamedTuple
+
 
 ## constants ##
 def even_or_odd(x=0): # if not specified, x should take value 0.

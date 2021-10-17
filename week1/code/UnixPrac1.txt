@@ -1,17 +1,17 @@
 
-../data/fasta wc -l 407228326.fasta  #1
+wc -l ../data/fasta/407228326.fasta  #1
 
-../data/fasta wc -l 407228412.fasta  #1
+wc -l ../data/fasta/407228412.fasta  #1
 
-../data/fasta wc -l E.coli.fasta  #1
+wc -l ../data/fasta/E.coli.fasta  #1
 
-../data/fasta cat E.coli.fasta | awk 'NR!=1' E.coli.fasta #2
+cat ../data/fasta/E.coli.fasta | awk 'NR!=1'  #2
 
-../data/fasta cat E.coli.fasta | sed '1d' E.coli.fasta |tr -d '[ \n]' | wc -c #3
+cat ../data/fasta/E.coli.fasta | sed '1d' |tr -d '\n' | wc -c #3
 
-../data/fasta cat E.coli.fasta | sed '1d' E.coli.fasta |tr -d '[\n]' | grep -o "ATGC" | wc -l #4
+cat ../data/fasta/E.coli.fasta | sed '1d' |tr -d '\n' | grep -o "ATGC" | wc -l #4
 
-../data echo "scale=3; $(grep -E -o "A|T" ../data/fasta/E.coli.fasta |wc -l) / $(grep -E -o "G|C" ../data/fasta/E.coli.fasta |wc -l)" | bc #5
+echo "scale=3; $(grep -E -o "A|T" ../data/fasta/E.coli.fasta |wc -l) / $(grep -E -o "G|C" ../data/fasta/E.coli.fasta |wc -l)" | bc #5
 
 
 

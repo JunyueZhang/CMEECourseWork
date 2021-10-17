@@ -8,6 +8,7 @@ for f in $1 $2
 do 
     if [ -f $f ]; then
         echo "$f is a regular file, let's continue!"
+        echo
         if [ -e $f ]; then
             echo "File $f exists."
             if [ -s $f ]; then
@@ -28,6 +29,7 @@ done
 
 cat $1 > $3
 cat $2 >> $3
+echo
 echo "The Merged File $3 is shown below:"
 cat $3
 echo "Well Done!"

@@ -1,5 +1,7 @@
 #!/bin/bash
+
 echo "Please enter the correct script name."
+echo
 if [ -d $1 ]; then
     echo "$1 is a directory, let's continue!"
     if [ -e $1 ]; then
@@ -23,11 +25,12 @@ do
             echo "File $f exists."
             if [ -s $f ]; then
                 echo "The file $f is non-null, let's move on!"
+                echo
                 echo "Converting $f"; 
                 path=${f%/*}  ## Obtain the path
-                file=${f##*/}
+                file=${f##*/} ## Obtain the filename with extension
                 filename=${file%.*}  ## Obtain the filename
-                convert "$f"  "$(basename "$f" .tif).png" > $path/$filename.png; 
+                convert "$f"  "$(basename "$f" .tif).png" >> $path/$filename.png; 
                 echo "Completed!"
             else
                 echo "The file $f is null, please check."

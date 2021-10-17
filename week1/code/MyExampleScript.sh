@@ -1,8 +1,10 @@
 #!/bin/bash
+
+
 echo "Please enter the correct script name."
-msg1="Hello"
-msg2=$USER
-for v in msg1 msg2
+MSG1="Hello"
+MSG2=$USER
+for v in MSG1 MSG2
 do
     if [ -n "$v" ]; then
         echo "The variable $v is non-null, let's move on!"
@@ -12,7 +14,7 @@ do
     fi
 done
 
-echo "$msg1 $msg2"
+echo "$MSG1 $MSG2"
 echo "Hello $USER"
 echo "Well Done!"
 echo

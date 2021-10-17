@@ -14,9 +14,11 @@ if [ -f $1 ]; then
         echo "File $1 exists."
         if [ -s $1 ]; then
             echo "The file $1 is non-null, let's move on!"
+            echo
             echo "Creating a comma delimited version of $1 ..." 
             path=${1%/*}
-            file=${1##*/}
+            #file=${1##*/}
+            file=$0
             filename=${file%.*}
             cat $1 | tr -s "\t" "," >> $path/$filename.csv
             echo "Well Done!"
