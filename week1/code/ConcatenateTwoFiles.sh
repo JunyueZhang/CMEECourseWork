@@ -4,7 +4,7 @@ echo "Please enter the correct script name."
 echo "Please enter three files separated by space(s)."
 
 
-for f in "$1" "$2"
+for f in "$1" "$2" "$3"
 do 
     if [ ! -f "$f" ]; then
         echo "Sorry, the file $f doesn't exist, please check!"
