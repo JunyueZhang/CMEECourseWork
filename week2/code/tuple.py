@@ -17,16 +17,15 @@ birds = ( ('Passerculus sandwichensis','Savannah sparrow',18.7),
 
 # Hints: use the "print" command! You can use list comprehensions!
 
-Latin_name = []
-Common_name = []
-Mass = []
+Latin_name = [i[0] for i in birds]
+Common_name = [i[1] for i in birds]
+Mass = [i[2] for i in birds]
 
-for i in birds:
-    Latin_name.append(i[0])
-    Common_name.append(i[1])
-    Mass.append(i[2])
-
-
-print("Latin name:", Latin_name)
-print("Common name:", Common_name)
-print("Mass:", Mass)
+#for i in birds:
+    #Latin_name.append(i[0])
+    #Common_name.append(i[1])
+    #Mass.append(i[2])
+    
+print("Latin name: ", Latin_name)
+print("Common name: ", Common_name)
+print("Mass: ", Mass)

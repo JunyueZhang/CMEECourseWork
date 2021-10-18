@@ -1,47 +1,28 @@
 #!/bin/bash
-
+file=$1
 echo "Please enter the correct script name."
-echo
-if [ -d $1 ]; then
-    echo "$1 is a directory, let's continue!"
-    if [ -e $1 ]; then
-        echo "Directory $1 exists, let's move on!" 
-    else
-        echo "Sorry, the directory $1 doesn't exist."
-        exit
+if [ "${file##*.}"x = "tif"x ]; then
+    if [ ! -f "$file" ]; then
+        echo "Sorry, the file $file doesn't exist, please check!"
+        exit 0
+    else 
+        echo "File $file exists, let's continue!"
+        if [ ! -s "$file" ]; then
+            echo "The file $file is null, please check."
+            exit 0
+        else
+            echo "The file $file is non-null, let's move on!"
+            echo
+            echo "Converting $file"; 
+            path=${file%/*}  ## Obtain the path
+            FILE=${file##*/} ## Obtain the filename with extension
+            filename=${FILE%.*}  ## Obtain the filename
+            convert "$file"  "$(basename "$file" .tif).png" >> $path/$filename.png; 
+            echo "Completed!"
+        fi
     fi
 else
-    echo "$1 is not a directory, please check."
-    exit
+    echo "This file is not .tif file, please check!"
+    exit 0  
 fi
-
-
-
-for f in $1/*.tif
-do 
-    if [ -f $f ]; then
-        echo "$f is a regular file, let's continue!"
-        if [ -e $f ]; then
-            echo "File $f exists."
-            if [ -s $f ]; then
-                echo "The file $f is non-null, let's move on!"
-                echo
-                echo "Converting $f"; 
-                path=${f%/*}  ## Obtain the path
-                file=${f##*/} ## Obtain the filename with extension
-                filename=${file%.*}  ## Obtain the filename
-                convert "$f"  "$(basename "$f" .tif).png" >> $path/$filename.png; 
-                echo "Completed!"
-            else
-                echo "The file $f is null, please check."
-                exit
-            fi   
-        else
-            echo "Sorry, the file $f doesn't exist."
-            exit
-        fi
-    else
-        echo "$f is not a regular file, please check!"
-        exit
-    fi
-done
+  

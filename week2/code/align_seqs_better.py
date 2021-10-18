@@ -55,8 +55,6 @@ def calculate_score(s1, s2, l1, l2, startpoint):
 
 # now try to find the best match (highest score) for the two sequences
 
-
-
 def main(argv):
     my_best_align = None
     my_best_score = -1
@@ -70,9 +68,7 @@ def main(argv):
 
         elif z == my_best_score:
             best_align = "." * i + s2
-            EquallyBest.append(best_align)
-
-        
+            EquallyBest.append(best_align)  
     print(EquallyBest)
     print(my_best_align)
     print(s1)
@@ -82,7 +78,6 @@ def main(argv):
         f1.write(f"\nBest score: {my_best_score}")
         f1.write(f"\nAll the equally-best alignments are: {EquallyBest}")
     return 0
-
 
 if (__name__ == "__main__"):
     status = main(sys.argv)

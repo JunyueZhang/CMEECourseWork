@@ -27,25 +27,25 @@ rainfall = (('JAN',111.4),
 #
 # Step #1:
 # Months and rainfall values when the amount of rain was greater than 100mm:
-AnswerOne = [('JAN', 111.4), ('FEB', 126.1), ('AUG', 140.2), ('NOV', 128.4), ('DEC', 142.2)]
+AnswerOne = [i for i in rainfall if i[1] > 100]
 print(AnswerOne)
 
 # Step #2:
 # Just month names where the amount of rain was less than 50 mm:
-AnswerTwo = ['MAR', 'SEP']
+AnswerTwo = [i[0] for i in rainfall if i[1] < 50]
 print(AnswerTwo)
 
 # Step #3:
-Greater_than_100 = []
-Less_than_50 = []
+Greater_than_100_3 = []
+Less_than_50_3 = []
 
 for i in rainfall:
     if i[1] > 100:
-        Greater_than_100.append(i) # Months and rainfall values when the amount of rain was greater than 100mm.
+        Greater_than_100_3.append(i) # Months and rainfall values when the amount of rain was greater than 100mm.
 
 for i in rainfall:
     if i[1] < 50:
-        Less_than_50.append(i[0]) # Just month names where the amount of rain was less than 50 mm.
+        Less_than_50_3.append(i[0]) # Just month names where the amount of rain was less than 50 mm.
 
-print(Greater_than_100)
-print(Less_than_50)
+print(Greater_than_100_3)
+print(Less_than_50_3)

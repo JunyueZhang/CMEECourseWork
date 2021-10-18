@@ -22,16 +22,16 @@ name_taxa_list = []
 for i in taxa:
     name_taxa_list.append(i[1])
 dic = {}
-name_taxa = list(set(name_taxa_list))
-#print(name_taxa)
+name_taxa = list(set(name_taxa_list)) ## create a unique name list
+
 
 for i in name_taxa:
     for j in taxa:
-            if i == j[1]:
-                    dic.setdefault(i, []).append(j[0])
-                    #dic[i] = j[0]
+            if i == j[1]: ## if matching, append the taxa
+                dic.setdefault(i, []).append(j[0])
+                
 for key in dic:
-        dic[key] = set(dic[key])
+        dic[key] = set(dic[key]) ## convert the values to set
     
 print(dic)
 

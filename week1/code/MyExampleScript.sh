@@ -6,11 +6,11 @@ MSG1="Hello"
 MSG2=$USER
 for v in MSG1 MSG2
 do
-    if [ -n "$v" ]; then
-        echo "The variable $v is non-null, let's move on!"
-    else
+    if [ ! -n "$v" ]; then
         echo "The variable $v is null, please check."
         exit
+    else
+        echo "The variable $v is non-null, let's move on!"   
     fi
 done
 

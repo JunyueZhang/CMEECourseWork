@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 import sys
 
-
 path = "../data/fasta/"
 if (len(sys.argv) > 1):
     f1 = open(path + sys.argv[1], "r")
@@ -73,8 +72,6 @@ def calculate_score(s1, s2, l1, l2, startpoint):
 
 # now try to find the best match (highest score) for the two sequences
 
-
-
 def main(argv):
     my_best_align = None
     my_best_score = -1
@@ -95,4 +92,6 @@ def main(argv):
 if (__name__ == "__main__"):
     status = main(sys.argv)
     sys.exit(status)
+
+    
     

@@ -5,46 +5,31 @@
 # Arguments: csv files
 # Date: Oct 2021
 
+file=$1
 echo "Please enter the correct script name."
-if [ -d $1 ]; then
-    echo "$1 is a directory, let's continue!"
-    if [ -e $1 ]; then
-        echo "Directory $1 exists, let's move on!" 
+if [ "${file##*.}"x = "csv"x ]; then
+    if [ ! -f "$file" ]; then
+        echo "Sorry, File $file doesn't exist, please check!"
+        exit 0
     else
-        echo "Sorry, the directory $1 doesn't exist."
-        exit
+        echo "File $file exists, let's continue!"
+        if [ ! -s "$file" ]; then
+            echo "The file $file is null, please check."
+            exit 0
+        else
+            echo "The file $file is non-null, let's move on!"
+            echo
+            echo "Now creating a space separated version of $file ..."
+            path=${file%/*}  ## Obtain the path
+            FILE=${file##*/} ## Obtain the filename with extension
+            filename=${FILE%.*}  ## Obtain the filename
+            cat $file | tr -s "," " " > $path/$filename.txt ## Convert the csv to space separated file
+            echo "Completed!"
+        fi 
     fi
 else
-    echo "$1 is not a directory, please check!"
-    exit 
+    echo "Sorry, this file is not .csv file, please check!"
+    exit 0  
 fi
 
-#for f in ../data/Temperatures/*.csv
-for f in $1/*.csv
-do 
-    if [ -f $f ]; then
-        echo "$f is a regular file, let's continue!"
-        if [ -e $f ]; then
-            echo "File $f exists!"
-            if [ -s $f ]; then
-                echo "The file $f is non-null, let's move on!"
-                echo
-                echo "Now creating a space separated version of $f ..."
-                path=${f%/*}  ## Obtain the path
-                file=${f##*/} ## Obtain the filename with extension
-                filename=${file%.*}  ## Obtain the filename
-                cat $f | tr -s "," " " > $path/$filename.txt ## Convert the csv to space separated file
-                echo "Completed!"
-            else
-                echo "The file $f is null, please check."
-                exit
-            fi  
-        else
-            echo "Sorry, File $f doesn't exist!"
-            exit
-        fi
-    else
-        echo "Sorry, $f is not a regular file, please check!"
-        exit
-    fi
-done
+

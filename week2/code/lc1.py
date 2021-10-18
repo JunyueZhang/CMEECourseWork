@@ -14,25 +14,28 @@ birds = ( ('Passerculus sandwichensis','Savannah sparrow',18.7),
 
 # A nice example out out is:
 # Step #1:
-Latin_names = ['Passerculus sandwichensis', 'Delichon urbica', 'Junco phaeonotus', 'Junco hyemalis', 'Tachycineata bicolor']
-Common_names = ['Savannah sparrow', 'House martin', 'Yellow-eyed junco', 'Dark-eyed junco', 'Tree swallow']
-Mean_body_masses = [18.7, 19, 19.5, 19.6, 20.2]
-print(Latin_names)
-print(Common_names)
-print(Mean_body_masses)
 
+Latin_names_1 = [i[0] for i in birds]
+Common_names_1 = [i[1] for i in birds]
+Mean_body_masses_1 = [i[2] for i in birds]
+
+print("Latin names: ", Latin_names_1)
+print("Common names: ", Common_names_1)
+print("Mean body masses: ", Mean_body_masses_1)
 
 #Step #2:
-Latin_names = []
-Common_names = []
-Mean_body_masses = []
+
+Latin_names_2 = []
+Common_names_2 = []
+Mean_body_masses_2 = []
 
 for i in birds:
-    Latin_names.append(i[0])
-    Common_names.append(i[1])
-    Mean_body_masses.append(i[2])
-   
+    Latin_names_2.append(i[0])
+    Common_names_2.append(i[1])
+    Mean_body_masses_2.append(i[2])
 
-print(Latin_names)
-print(Common_names)
-print(Mean_body_masses)        
+print("Latin names: ", Latin_names_2)
+print("Common names: ", Common_names_2)
+print("Mean body masses: ", Mean_body_masses_2)
+   
+        
