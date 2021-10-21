@@ -1,0 +1,762 @@
+Starting code feedback for Junyue, Week1
+
+Current Points = 100
+
+Note that: 
+(1) Major sections begin with a double "====" line 
+(2) Subsections begin with a single "====" line 
+(3) Code output or text file content are printed within single "*****" lines 
+
+======================================================================
+======================================================================
+Your Git repo size this week is about 1.58 MiB on disk 
+
+PART 1: Checking project workflow...
+
+Found the following directories in parent directory: .git, week2, Feedback, week1
+
+Found the following files in parent directory: README.md, .gitignore
+
+Checking for key files in parent directory...
+
+Found .gitignore in parent directory, great! 
+
+Printing contents of .gitignore:
+
+**********************************************************************
+*~ 
+*.tmp
+
+**********************************************************************
+
+Found README in parent directory, named: README.md
+
+Printing contents of README.md:
+
+**********************************************************************
+# Project name / title
+My CMEE Coursework Repository
+
+# Brief description
+This repository is divided into several weeks, each week includes code, data, sandbox, results, README.md, and .gitignore. There are some data files downloaded from the [TheMulQuaBio repository](https://github.com/mhasoba/TheMulQuaBio) in the data directory. The sandbox directory includes several test files. And the code directory covers some important scripts.
+
+# Languages
+The languages mainly consist of Python, R language, and Shell.
+
+# Dependencies
+The special packages for each week can be found in weekly README.md.
+
+# Installation
+Guidelines for installing the various projects can be found in weekly README.md.
+
+# Project structure and Usage
+Each week's directory is organized with code, data, results, sandbox, and several required files. Guidelines for specific files are in each week's README.md.
+
+# Author name and contact
+Junyue Zhang jz1621@ic.ac.uk
+
+
+
+**********************************************************************
+
+======================================================================
+Looking for the weekly directories...
+
+Found 2 weekly directories: week1, week2
+
+The Week1 directory will be assessed 
+
+======================================================================
+======================================================================
+PART 2: Checking weekly code and workflow...
+
+======================================================================
+Assessing WEEK1...
+
+Found the following directories: code, sandbox, results, data
+
+Found the following files: README.md, .gitignore
+
+Checking for readme file in weekly directory...
+
+Found README in parent directory, named: README.md
+
+Printing contents of README.md:
+
+**********************************************************************
+# CMEECourseWork Week1
+## Brief description
+The week1 directory is organized with code, data, results, sandbox, and several required files. There are a few data files downloaded from the [TheMulQuaBio repository](https://github.com/mhasoba/TheMulQuaBio) in the data directory. 
+The sandbox directory includes several test files.
+The UnixPrac1.txt in the code directory is written in UNIX shell commands to solve the [FASTA exercise](https://mhasoba.github.io/TheMulQuaBio/notebooks/01-Unix.html#fasta-exercise). The code directory also includes several shell scripts such as csvtospace.sh and tabtocsv.sh.
+The [csvtospace.sh](https://mhasoba.github.io/TheMulQuaBio/notebooks/02-ShellScripting.html#a-new-shell-script) is designed to transform a comma-delimited file to a space-separated values one and save the file under a different name. 
+The bash script [CompileLaTeX.sh](https://mhasoba.github.io/TheMulQuaBio/notebooks/04-LaTeX.html#first-latex-example) is used to make it more convenient for users to compile the script by typing "bash CompileLaTeX.sh FirstExample.tex".
+And the rest of the shell scripts are modified based on the existing ones in the [Shell scripting chapter](https://mhasoba.github.io/TheMulQuaBio/notebooks/02-ShellScripting.html#a-useful-shell-scripting-example) to improve robustness.
+
+## Languages
+The languages used in week1 are UNIX commands (Ubuntu 20.04.3) and bash shell.
+
+## Dependencies
+The shell script tiff2png.sh needs to install imagemagick. LaTeX is also necessary to be installed to run the CompileLaTeX.sh.
+
+## Installation
+The Ubuntu desktop can be downloaded via [installation tutorial](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview).
+
+## Project structure and Usage
+The week1 section includes code, data, results, sandbox. There are some shell scripts in the code directory. The csvtospace.sh script can convert a comma-delimited file to a space-separated one and save it with a different name. 
+The CompileLaTeX.sh script can accept "FirstExample.tex" as an input to create the LaTeX file.
+And the UnixPrac1.txt is used to solve the FASTA exercise. As for the rest of the scripts, they have been improved to be more robust based on the original ones. They can test whether the file exists or is null and exit the file if necessary.
+All the scripts can be easily run with the bash command and correct script name.
+
+## Author name and contact
+Junyue Zhang jz1621@ic.ac.uk
+
+**********************************************************************
+
+Results directory is empty - good! 
+
+Found 12 code files: tiff2png.sh, CountLines.sh, FirstBiblio.bib, tabtocsv.sh, variables.sh, FirstExample.tex, boilerplate.sh, csvtospace.sh, ConcatenateTwoFiles.sh, UnixPrac1.txt, CompileLaTeX.sh, MyExampleScript.sh
+
+Found the following extra files: FirstExample.pdf
+0.5 pt deducted per extra file
+
+Current Points = 99.5
+
+======================================================================
+Testing script/code files...
+
+======================================================================
+Inspecting script file tiff2png.sh...
+
+File contents are:
+
+**********************************************************************
+#!/bin/bash
+file=$1
+echo "Please enter the correct script name."
+if [ "${file##*.}"x = "tif"x ]; then
+    if [ ! -f "$file" ]; then
+        echo "Sorry, the file $file doesn't exist, please check!"
+        exit 0
+    else 
+        echo "File $file exists, let's continue!"
+        if [ ! -s "$file" ]; then
+            echo "The file $file is null, please check."
+            exit 0
+        else
+            echo "The file $file is non-null, let's move on!"
+            echo
+            echo "Converting $file"; 
+            path=${file%/*}  ## Obtain the path
+            FILE=${file##*/} ## Obtain the filename with extension
+            filename=${FILE%.*}  ## Obtain the filename
+            convert "$file"  "$(basename "$file" .tif).png" >> $path/$filename.png; 
+            echo "Completed!"
+        fi
+    fi
+else
+    echo "This file is not .tif file, please check!"
+    exit 0  
+fi
+  
+
+**********************************************************************
+
+Testing tiff2png.sh...
+
+Output (only first 500 characters): 
+
+
+**********************************************************************
+Please enter the correct script name.
+This file is not .tif file, please check!
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.00267s
+
+======================================================================
+Inspecting script file CountLines.sh...
+
+File contents are:
+
+**********************************************************************
+#!/bin/bash
+
+echo "Please enter the correct script name."
+
+if [ ! -f "$1" ]; then
+    echo "Sorry, the file $1 doesn't exist, please check!"
+    exit 0  
+else
+    echo "File $1 exists, let's continue!"
+    if [ ! -s "$1" ]; then
+        echo "The file is null, please check."
+        exit 0
+    else
+        echo "The file $1 is non-null, let's move on!"
+        NumLines=`wc -l < $1`
+        echo "The file $1 has $NumLines lines."
+        echo "Well Done!"
+    fi
+fi
+
+
+**********************************************************************
+
+Testing CountLines.sh...
+
+Output (only first 500 characters): 
+
+
+**********************************************************************
+Please enter the correct script name.
+Sorry, the file  doesn't exist, please check!
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.00330s
+
+======================================================================
+Inspecting script file FirstBiblio.bib...
+
+File contents are:
+
+**********************************************************************
+@article{verhulst1838notice,
+  title={Notice sur la loi que la population suit dans son accroissement},
+  author={Verhulst, Pierre-Fran{\c{c}}ois},
+  journal={Corresp. Math. Phys.},
+  volume={10},
+  pages={113--126},
+  year={1838}
+}
+
+**********************************************************************
+
+Testing FirstBiblio.bib...
+
+======================================================================
+Inspecting script file tabtocsv.sh...
+
+File contents are:
+
+**********************************************************************
+#!/bin/bash
+# Author: Junyue jz1621@imperial.ac.uk
+# Script: tabtocsv.sh
+# Description: substitute the tabs in the files with commas
+#
+# Saves the output into a .csv file
+# Arguments: 1 -> tab delimited file
+# Date: Oct 2021
+
+echo "Please enter the correct script name."
+if [ ! -f "$1" ]; then
+    echo "Sorry, the file $1 doesn't exist, please check!"
+    exit 0
+else 
+    echo "File $1 exists, let's continue!"
+    if [ ! -s "$1" ]; then
+        echo "The file $1 is null, please check."
+        exit 0
+    else
+        echo "The file $1 is non-null, let's move on!"
+        echo
+        echo "Creating a comma delimited version of $1 ..." 
+        path=${1%/*}
+        #file=${1##*/}
+        file=$0
+        filename=${file%.*}
+        cat $1 | tr -s "\t" "," >> $path/$filename.csv
+        echo "Well Done!"
+    fi 
+fi
+
+
+
+**********************************************************************
+
+Testing tabtocsv.sh...
+
+Output (only first 500 characters): 
+
+
+**********************************************************************
+Please enter the correct script name.
+Sorry, the file  doesn't exist, please check!
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.00328s
+
+======================================================================
+Inspecting script file variables.sh...
+
+File contents are:
+
+**********************************************************************
+#!/bin/bash
+# Author: Junyue jz1621@imperial.ac.uk
+# Script: variables.sh
+# Description: Shows the use of variables
+# Arguments: MyVar, a, b
+# Date: Oct 2021
+
+# Shows the use of variables
+## Illustrates the use of variables 
+
+# Special variables
+
+echo "This script was called with $# parameters"
+echo "The script's name is $0"
+echo "The arguments are $@"
+echo "The first argument is $1"
+echo "The second argument is $2"
+
+# Assigned Variables; Explicit declaration:
+echo "Please enter the correct script name."
+MY_VAR='some string'
+if [ -z "$MY_VAR" ]; then
+    echo "The variable is null, please check."
+    exit 0
+else
+    echo "The variable is non-null, let's move on!"   
+fi
+
+echo 'the current value of the variable is' $MY_VAR
+echo
+
+echo 'Please enter a new string'
+read MY_VAR
+echo
+if [ -z "$MY_VAR" ]; then
+    echo "The variable is null, please check."
+    exit
+else
+    echo "The variable is non-null, let's move on!" 
+fi
+echo 'the current value of the variable is' $MY_VAR
+echo
+
+## Reading multiple values
+## Assigned Variables; Reading (multiple values) from user input:
+echo 'Enter two numbers separated by space(s)'
+read a b
+echo
+
+
+if ([ -z "$a" ]) | ([ -z "$b" ]); then
+    echo "The variable is null, please check!"
+    exit
+else
+    echo "The variable is non-null, let's move on!" 
+    echo 'you entered' $a 'and' $b '; Their sum is:'
+    MY_SUM=$(expr $a + $b)
+    echo $MY_SUM
+    echo "Well Done!"
+fi
+    
+    
+
+**********************************************************************
+
+Testing variables.sh...
+
+Output (only first 500 characters): 
+
+
+**********************************************************************
+This script was called with 0 parameters
+The script's name is variables.sh
+The arguments are 
+The first argument is 
+The second argument is 
+Please enter the correct script name.
+The variable is non-null, let's move on!
+the current value of the variable is some string
+
+Please enter a new string
+
+The variable is null, please check.
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.00364s
+
+======================================================================
+Inspecting script file FirstExample.tex...
+
+File contents are:
+
+**********************************************************************
+
+\documentclass[12pt]{article}
+\title{A Simple Document}
+\author{Junyue Zhang}
+\date{}
+\begin{document}
+  \maketitle
+
+  \begin{abstract}
+    This paper analyzes a seminal equation in population biology.
+  \end{abstract}
+
+  \section{Introduction}
+    Blah Blah
+
+   \section{Materials \& Methods}
+   A foundational equation of population biology is:
+
+   \begin{equation}
+     \frac{dN}{dt} = r N (1 - \frac{N}{K})
+   \end{equation}
+
+   It was first proposed by Verhulst in 1838 \cite{verhulst1838notice}.
+
+   \bibliographystyle{plain}
+
+   \bibliography{FirstBiblio}
+
+\end{document}
+**********************************************************************
+
+Testing FirstExample.tex...
+
+======================================================================
+Inspecting script file boilerplate.sh...
+
+File contents are:
+
+**********************************************************************
+##!/bin/bash
+# Author: Junyue jz1621@imperial.ac.uk
+# Script: boilerplate.sh
+# Desc: simple boilerplate for shell scripts
+# Arguments: none
+# Date: Oct 2021
+
+echo -e "\nThis is a shell script! \n"
+#exit
+
+
+
+
+
+
+
+**********************************************************************
+
+Testing boilerplate.sh...
+
+Output (only first 500 characters): 
+
+
+**********************************************************************
+
+This is a shell script! 
+
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.00313s
+
+======================================================================
+Inspecting script file csvtospace.sh...
+
+File contents are:
+
+**********************************************************************
+#!/bin/bash
+# Author: Junyue jz1621@imperial.ac.uk
+# Script: csvtospace.sh
+# Desc: csv to space
+# Arguments: csv files
+# Date: Oct 2021
+
+file=$1
+echo "Please enter the correct script name."
+if [ "${file##*.}"x = "csv"x ]; then
+    if [ ! -f "$file" ]; then
+        echo "Sorry, File $file doesn't exist, please check!"
+        exit 0
+    else
+        echo "File $file exists, let's continue!"
+        if [ ! -s "$file" ]; then
+            echo "The file $file is null, please check."
+            exit 0
+        else
+            echo "The file $file is non-null, let's move on!"
+            echo
+            echo "Now creating a space separated version of $file ..."
+            path=${file%/*}  ## Obtain the path
+            FILE=${file##*/} ## Obtain the filename with extension
+            filename=${FILE%.*}  ## Obtain the filename
+            cat $file | tr -s "," " " > $path/$filename.txt ## Convert the csv to space separated file
+            echo "Completed!"
+        fi 
+    fi
+else
+    echo "Sorry, this file is not .csv file, please check!"
+    exit 0  
+fi
+
+
+
+**********************************************************************
+
+Testing csvtospace.sh...
+
+Output (only first 500 characters): 
+
+
+**********************************************************************
+Please enter the correct script name.
+Sorry, this file is not .csv file, please check!
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.00376s
+
+======================================================================
+Inspecting script file ConcatenateTwoFiles.sh...
+
+File contents are:
+
+**********************************************************************
+#!/bin/bash
+
+echo "Please enter the correct script name."
+echo "Please enter three files separated by space(s)."
+
+
+for f in "$1" "$2" "$3"
+do 
+    if [ ! -f "$f" ]; then
+        echo "Sorry, the file $f doesn't exist, please check!"
+        exit 0
+    else
+        echo "File $f exists, let's continue!"
+        if [ ! -s "$f" ]; then
+            echo "The file $f is null, please check!"
+            exit 0
+        else
+            echo "The file $f is non-null, let's move on!" 
+        fi
+    fi           
+done 
+
+cat $1 > $3
+cat $2 >> $3
+echo
+echo "The Merged File $3 is shown below:"
+cat $3
+echo "Well Done!"
+
+
+
+    
+**********************************************************************
+
+Testing ConcatenateTwoFiles.sh...
+
+Output (only first 500 characters): 
+
+
+**********************************************************************
+Please enter the correct script name.
+Please enter three files separated by space(s).
+Sorry, the file  doesn't exist, please check!
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.00356s
+
+======================================================================
+Inspecting script file UnixPrac1.txt...
+
+File contents are:
+
+**********************************************************************
+
+wc -l ../data/fasta/407228326.fasta  #1
+
+wc -l ../data/fasta/407228412.fasta  #1
+
+wc -l ../data/fasta/E.coli.fasta  #1
+
+cat ../data/fasta/E.coli.fasta | awk 'NR!=1'  #2
+
+cat ../data/fasta/E.coli.fasta | sed '1d' |tr -d '\n' | wc -c #3
+
+cat ../data/fasta/E.coli.fasta | sed '1d' |tr -d '\n' | grep -o "ATGC" | wc -l #4
+
+echo "scale=3; $(grep -E -o "A|T" ../data/fasta/E.coli.fasta |wc -l) / $(grep -E -o "G|C" ../data/fasta/E.coli.fasta |wc -l)" | bc #5
+
+
+
+
+
+**********************************************************************
+
+Testing UnixPrac1.txt...
+
+======================================================================
+Inspecting script file CompileLaTeX.sh...
+
+File contents are:
+
+**********************************************************************
+#!/bin/bash
+
+name=$(echo "$1" | cut -f 1 -d '.')
+pdflatex $name.tex
+bibtex $name
+pdflatex $name.tex
+pdflatex $name.tex
+evince $name.pdf &
+
+## Cleanup
+rm *.aux
+rm *.log
+rm *.bbl
+rm *.blg
+**********************************************************************
+
+Testing CompileLaTeX.sh...
+
+Output (only first 500 characters): 
+
+
+**********************************************************************
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(/usr/share/texlive/texmf-dist/tex/latex/tools/.tex
+LaTeX2e <2020-02-02> patch level 2
+L3 programming layer <2020-02-14> File ignored)
+*
+! Emergency stop.
+<*> .tex
+        
+!  ==> Fatal error occurred, no output PDF file produced!
+Transcript written on .log.
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdf
+**********************************************************************
+
+Encountered error (or warning):
+bibtex: Need exactly one file argument.
+Try `bibtex --help' for more information.
+rm: cannot remove '*.aux': No such file or directory
+rm: cannot remove '*.log': No such file or directory
+rm: cannot remove '*.bbl': No such file or directory
+rm: cannot remove '*.blg': No such file or directory
+
+** (evince:100791): WARNING **: 14:15:39.259: Error when getting information for file “/home/mhasoba/Documents/Teaching/IC_CMEE/2021-22/Coursework/StudentRepos/JunyueZhang_jz1621/week1/code/.pdf”: No such file or directory
+
+** (evince:100791): WARNING **: 14:15:39.259: set_filenames: Error when getting information for file “/home/mhasoba/Documents/Teaching/IC_CMEE/2021-22/Coursework/StudentRepos/JunyueZhang_jz1621/week1/code/.pdf”: No such file or directory
+
+** (evince:100791): WARNING **: 14:15:39.274: Error setting file metadata: No such file or directory
+
+** (evince:100791): WARNING **: 14:15:39.274: Error setting file metadata: No such file or directory
+
+** (evince:100791): WARNING **: 14:15:39.274: Error setting file metadata: No such file or directory
+
+** (evince:100791): WARNING **: 14:15:39.274: Error setting file metadata: No such file or directory
+
+** (evince:100791): WARNING **: 14:15:39.274: Error setting file metadata: No such file or directory
+
+** (evince:100791): WARNING **: 14:15:39.274: Error setting file metadata: No such file or directory
+
+** (evince:100791): WARNING **: 14:15:39.274: Error setting file metadata: No such file or directory
+
+** (evince:100791): WARNING **: 14:15:39.274: Error setting file metadata: No such file or directory
+
+** (evince:100791): WARNING **: 14:15:39.274: Error setting file metadata: No such file or directory
+
+** (evince:100791): WARNING **: 14:15:39.274: Error setting file metadata: No such file or directory
+
+** (evince:100791): WARNING **: 14:15:39.274: Error setting file metadata: No such file or directory
+
+** (evince:100791): WARNING **: 14:15:39.274: Error setting file metadata: No such file or directory
+
+** (evince:100791): WARNING **: 14:15:39.281: Error setting file metadata: No such file or directory
+
+** (evince:100791): WARNING **: 14:15:39.281: Error setting file metadata: No such file or directory
+
+======================================================================
+Inspecting script file MyExampleScript.sh...
+
+File contents are:
+
+**********************************************************************
+#!/bin/bash
+
+
+echo "Please enter the correct script name."
+MSG1="Hello"
+MSG2=$USER
+for v in MSG1 MSG2
+do
+    if [ ! -n "$v" ]; then
+        echo "The variable $v is null, please check."
+        exit
+    else
+        echo "The variable $v is non-null, let's move on!"   
+    fi
+done
+
+echo "$MSG1 $MSG2"
+echo "Hello $USER"
+echo "Well Done!"
+echo
+**********************************************************************
+
+Testing MyExampleScript.sh...
+
+Output (only first 500 characters): 
+
+
+**********************************************************************
+Please enter the correct script name.
+The variable MSG1 is non-null, let's move on!
+The variable MSG2 is non-null, let's move on!
+Hello mhasoba
+Hello mhasoba
+Well Done!
+
+
+**********************************************************************
+
+Code ran without errors
+
+Time consumed = 0.00543s
+
+======================================================================
+======================================================================
+Finished running scripts
+
+Ran into 1 errors
+
+======================================================================
+======================================================================
+
+FINISHED WEEKLY ASSESSMENT
+
+Current Points for the Week = 99.5
+
+NOTE THAT THESE ARE POINTS, NOT MARKS FOR THE WEEK!
