@@ -1,3 +1,10 @@
+#!/usr/bin/env python3
+
+""" Write a short python script to populate a dictionary called taxa_dic derived from  taxa so that it maps order names to sets of taxa."""
+__author__ = 'Junyue Zhang (jz1621@ic.ac.uk)'
+__version__ = '0.0.1'
+
+
 taxa = [ ('Myotis lucifugus','Chiroptera'),
          ('Gerbillus henleyi','Rodentia',),
          ('Peromyscus crinitus', 'Rodentia'),
@@ -21,19 +28,19 @@ taxa = [ ('Myotis lucifugus','Chiroptera'),
 name_taxa_list = []
 for i in taxa:
     name_taxa_list.append(i[1])
-dic = {}
+taxa_dic = {}
 name_taxa = list(set(name_taxa_list)) ## create a unique name list
 
 
 for i in name_taxa:
     for j in taxa:
             if i == j[1]: ## if matching, append the taxa
-                dic.setdefault(i, []).append(j[0])
+                taxa_dic.setdefault(i, []).append(j[0])
                 
-for key in dic:
-        dic[key] = set(dic[key]) ## convert the values to set
+for key in taxa_dic:
+        taxa_dic[key] = set(taxa_dic[key]) ## convert the values to set
     
-print(dic)
+print(taxa_dic)
 
 
 

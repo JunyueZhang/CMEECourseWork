@@ -9,7 +9,7 @@ The code directory contains a number of important scripts for the practicals in 
 The language used in week2 is python.
 
 ## Dependencies
-There are many useful python packages available in standard libraries, they can be explicitly installed using "sudo apt install python-packagename". For week2 section, sys and csv packages need to be installed. 
+There are many useful python packages available in standard libraries, and they can be explicitly installed using "sudo apt install python-packagename". For week2 section, sys and csv packages need to be installed. 
 
 ## Installation
 Details for Python packages can be found on the [Python Standard Library](https://docs.python.org/3/library/index.html). 
@@ -21,10 +21,8 @@ The week2 part includes code, data, results, sandbox. There are some python scri
 + The script tuple.py can print latin name, common name, mass of birds on a separate line or output block by species. 
 + The script dictionary.py can populate a dictionary called taxa_dic derived from taxa so that it maps order names to sets of taxa.
 + The script cfexercises1.py has six useful functions to implement different calculations.
-+ The script align_seqs.py can take the DNA sequences as an input from a single csv file and save the best alignment along with its corresponding score in a single text file.
-+ The script align_seqs_fasta.py can take any two fasta sequences in separate files to be aligned as input.
-+ The script align_seqs_better.py can record and save all the equally-best alignments. 
++ The script align_seqs.py can take the DNA sequences as an input from a single csv file and save the best alignment along with its corresponding score in a single text file. 
 All the scripts can be easily run with the python command and correct script name.
 
 ## Author name and contact
-Junyue Zhang jz1621@ic.ac.uk
+Junyue Zhang  jz1621@ic.ac.uk

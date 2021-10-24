@@ -1,3 +1,12 @@
+#!/usr/bin/env python3
+
+""" Create a list of month, rainfall tuples where the amount of rain was greater than 100 mm. """
+""" Create a list of just month names where the amount of rain was less than 50 mm. """
+
+__author__ = 'Junyue Zhang (jz1621@ic.ac.uk)'
+__version__ = '0.0.1'
+
+
 # Average UK Rainfall (mm) for 1910 by month
 # http://www.metoffice.gov.uk/climate/uk/datasets
 rainfall = (('JAN',111.4),
