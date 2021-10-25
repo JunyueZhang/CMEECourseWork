@@ -39,7 +39,8 @@ stochrickvect <- function(p0 = runif(1000, .5, 1.5), r = 1.2, K = 1, sigma = 0.2
   
   for (yr in 2:numyears){
       
-      N[yr, ] <- N[yr-1, ] * exp(r * (1 - N[yr - 1, ] / K) # add one fluctuation from normal distribution
+      N[yr, ] <- N[yr-1, ] * exp(r * (1 - N[yr - 1, ] / K) + rnorm(1000, 0, sigma)) # add one fluctuation from normal distribution
+  }
   return(N)
 }
 

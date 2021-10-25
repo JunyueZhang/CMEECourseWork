@@ -12,7 +12,7 @@ for s in summands:
     total = total + s
     print(total)
 
-# WHILE loops   in Python
+# WHILE loops in Python
 z = 0
 while z < 100:
     z = z + 1
