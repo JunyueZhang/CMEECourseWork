@@ -13,7 +13,7 @@ if (z <= 0.5) {
   print("Less than a half")
 }
 
-for (i in seq(10)){
+for (i in 1:10){
     j <- i * i
     print(paste(i, "squared is", j))
 }

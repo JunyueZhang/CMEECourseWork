@@ -1,3 +1,15 @@
+#!/usr/bin/env python3
+
+"""This script uses both for loops and list comprehensions."""
+
+__appname__ = '[application name here]'
+__author__ = 'Junyue (jz1621@ic.ac.uk)'
+__version__ = '0.0.1'
+__license__ = "License for this code/program"
+
+
+
+
 ## Finds just those taxa that are oak trees from a list of species
 
 taxa = [ 'Quercus robur',
@@ -7,6 +19,7 @@ taxa = [ 'Quercus robur',
          'Quercus petraea',
        ]
 def is_an_oak(name):
+    """return the lowercase of the name beginning with quercus."""
     return name.lower().startswith('quercus')
 
 ## Using for loops

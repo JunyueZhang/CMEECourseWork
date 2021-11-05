@@ -2,8 +2,10 @@
 
 """Convert align_seqs.py to a Python program that takes the DNA sequences as an input from a single external file and saves the best alignment along with its corresponding score in a single text file."""
 
-__author__ = 'Junyue Zhang (jz1621@ic.ac.uk)'
+__appname__ = '[application name here]'
+__author__ = 'Junyue (jz1621@ic.ac.uk)'
 __version__ = '0.0.1'
+__license__ = "License for this code/program"
 
 
 ## imports ##

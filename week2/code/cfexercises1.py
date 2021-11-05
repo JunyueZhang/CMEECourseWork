@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 
-"""This program includes six functions."""
-__author__ = 'Junyue Zhang (jz1621@ic.ac.uk)'
+"""This program includes six functions of conditionals."""
+
+__appname__ = '[application name here]'
+__author__ = 'Junyue (jz1621@ic.ac.uk)'
 __version__ = '0.0.1'
+__license__ = "License for this code/program"
 
 ## imports ##
 

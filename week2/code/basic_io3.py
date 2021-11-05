@@ -1,3 +1,16 @@
+#!/usr/bin/env python3
+
+"""Save an object (even complex) for later use and load the data again."""
+
+
+__appname__ = '[application name here]'
+__author__ = 'Junyue (jz1621@ic.ac.uk)'
+__version__ = '0.0.1'
+__license__ = "License for this code/program"
+
+
+
+
 #############################
 # STORING OBJECTS
 #############################

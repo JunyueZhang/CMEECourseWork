@@ -29,6 +29,7 @@ MyData[MyData == ""] = 0
 
 TempData <- as.data.frame(MyData[-1,],stringsAsFactors = F) #stringsAsFactors = F is important!
 colnames(TempData) <- MyData[1,] # assign column names from original data
+rownames(TempData) <- NULL
 
 ############# Convert from wide to long format  ###############
 require(reshape2) # load the reshape2 package
@@ -48,3 +49,11 @@ head(MyWrangledData)
 dim(MyWrangledData)
 
 ############# Exploring the data (extend the script below)  ###############
+require(tidyverse)
+tidyverse_packages(include_self = TRUE) # the include_self = TRUE means list "tidyverse" as well 
+MyWrangledData <- tibble::as_tibble(MyWrangledData) 
+MyWrangledData
+class(MyWrangledData)
+dplyr::glimpse(MyWrangledData) #like str(), but nicer!
+dplyr::filter(MyWrangledData, Count>100) #like subset(), but nicer!
+dplyr::slice(MyWrangledData, 10:15) # Look at an arbitrary set of data rows

@@ -2,8 +2,10 @@
 
 """ Print a tuple of tuples of length three: latin name, common name, mass, on a separate line or output block by species."""
 
-__author__ = 'Junyue Zhang (jz1621@ic.ac.uk)'
+__appname__ = '[application name here]'
+__author__ = 'Junyue (jz1621@ic.ac.uk)'
 __version__ = '0.0.1'
+__license__ = "License for this code/program"
 
 
 birds = ( ('Passerculus sandwichensis','Savannah sparrow',18.7),

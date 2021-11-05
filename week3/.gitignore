@@ -2,5 +2,4 @@ sandbox/*
 !sandbox/.gitkeep
 results/*
 !results/.gitkeep
-code/__*
-
+.Rhistory

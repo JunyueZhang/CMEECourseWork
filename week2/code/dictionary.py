@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 
 """ Write a short python script to populate a dictionary called taxa_dic derived from  taxa so that it maps order names to sets of taxa."""
-__author__ = 'Junyue Zhang (jz1621@ic.ac.uk)'
+__appname__ = '[application name here]'
+__author__ = 'Junyue (jz1621@ic.ac.uk)'
 __version__ = '0.0.1'
+__license__ = "License for this code/program"
 
 
 taxa = [ ('Myotis lucifugus','Chiroptera'),

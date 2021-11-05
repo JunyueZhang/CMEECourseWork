@@ -7,7 +7,7 @@ NoPreallocFun <- function(x){
   }
 }
 
-system.time(NoPreallocFun(100000))
+system.time(NoPreallocFun(10))
 
 
 PreallocFun <- function(x){
@@ -19,4 +19,4 @@ PreallocFun <- function(x){
   }
 }
 
-system.time(PreallocFun(100000))
+system.time(PreallocFun(10))

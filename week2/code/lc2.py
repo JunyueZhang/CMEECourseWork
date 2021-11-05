@@ -3,8 +3,10 @@
 """ Create a list of month, rainfall tuples where the amount of rain was greater than 100 mm. """
 """ Create a list of just month names where the amount of rain was less than 50 mm. """
 
-__author__ = 'Junyue Zhang (jz1621@ic.ac.uk)'
+__appname__ = '[application name here]'
+__author__ = 'Junyue (jz1621@ic.ac.uk)'
 __version__ = '0.0.1'
+__license__ = "License for this code/program"
 
 
 # Average UK Rainfall (mm) for 1910 by month

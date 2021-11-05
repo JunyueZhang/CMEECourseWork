@@ -2,8 +2,10 @@
 
 """ Write three separate list comprehensions that create three different lists containing the latin names, common names and mean body masses for each species in birds, respectively."""
 
-__author__ = 'Junyue Zhang (jz1621@ic.ac.uk)'
+__appname__ = '[application name here]'
+__author__ = 'Junyue (jz1621@ic.ac.uk)'
 __version__ = '0.0.1'
+__license__ = "License for this code/program"
 
 
 

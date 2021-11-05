@@ -1,3 +1,14 @@
+#!/usr/bin/env python3
+
+"""This script shows some loops examples."""
+
+__appname__ = '[application name here]'
+__author__ = 'Junyue (jz1621@ic.ac.uk)'
+__version__ = '0.0.1'
+__license__ = "License for this code/program"
+
+
+
 # For loops in Python
 for i in range(5):
     print(i)
