@@ -14,7 +14,7 @@ The languages used in week1 are UNIX commands (Ubuntu 20.04.3) and bash shell.
 The shell script tiff2png.sh needs to install imagemagick. LaTeX is also necessary to be installed to run the CompileLaTeX.sh.
 
 ## Installation
-The Ubuntu desktop can be downloaded via [installation tutorial](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview).
+The Ubuntu desktop can be downloaded via [installation tutorial](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview). LaTeX can be installed by typing this in terminal: "sudo apt-get install texlive-full texlive-fonts-recommended texlive-pictures texlive-latex-extra imagemagick".
 
 ## Project structure and Usage
 The week1 section includes code, data, results, sandbox, and writeup. There are some shell scripts in the code directory. 
