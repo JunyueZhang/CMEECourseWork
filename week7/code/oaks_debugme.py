@@ -12,7 +12,7 @@ import csv
 import sys
 import doctest # import the doctest module
 
-# Define function
+# define function is_an_oak
 def is_an_oak(name):
     """ Returns True if name is matching with 'quercus'. 
 
@@ -56,7 +56,7 @@ def main(argv):
         print(row[0] + '\n')
         if is_an_oak(row[0]): # check if the name is matching with 'quercus'.
             print('FOUND AN OAK!\n')
-            csvwrite.writerow([row[0], row[1]])    
+            csvwrite.writerow([row[0], row[1]]) # write to the csv file
 
     return 0
     

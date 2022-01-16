@@ -2,13 +2,14 @@
 ## Brief description
 The week7 directory is organized with code, data, results, sandbox, README.md, and .gitignore. There are a few data files downloaded from the [TheMulQuaBio repository](https://github.com/mhasoba/TheMulQuaBio) as required in the data directory. 
 The sandbox directory and results directory are used to store test scripts and results for the scripts in the code directory, respectively.
-The code directory contains a number of important scripts for the  [Python I chapter](https://mhasoba.github.io/TheMulQuaBio/notebooks/05-Python_I.html#id2) and [Python II chapter](https://mhasoba.github.io/TheMulQuaBio/notebooks/06-Python_II.html#practicals).
+The code directory contains a number of important python scripts for the  [Python I chapter](https://mhasoba.github.io/TheMulQuaBio/notebooks/05-Python_I.html#id2) and [Python II chapter](https://mhasoba.github.io/TheMulQuaBio/notebooks/06-Python_II.html#practicals).
+And there are some Python packages (numpy, scipy, matplotlib, csv, sys, doctest, subprocess, timeit, time) needed to be imported before running the scripts.
 
 ## Languages
 The language used in week7 is Python.
 
 ## Dependencies
-For the week7 section, there are a number of useful Python packages (numpy, scipy, matplotlib, timeit, time, re) needed to be imported. 
+For the week7 section, there are a number of useful Python packages (numpy, scipy, matplotlib, csv, sys, doctest, subprocess, timeit, time) needed to be imported. 
 
 ## Installation
 Some useful Python packages are available as standard libraries and can be easily imported from within python or ipython, other packages are accessible by explicitly installing them using "sudo apt install python-packagename" or by using pip. 

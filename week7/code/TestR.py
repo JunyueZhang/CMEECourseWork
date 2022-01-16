@@ -8,5 +8,6 @@ __version__ = '0.0.1'
 __license__ = "License for this code/program"
 
 
-import subprocess
+import subprocess # import
+# run R from Python
 subprocess.Popen("Rscript --verbose TestR.R > ../results/TestR.Rout 2> ../results/TestR_errFile.Rout", shell=True).wait()

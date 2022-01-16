@@ -3,3 +3,6 @@ sandbox/*
 results/*
 !results/.gitkeep
 code/__pycache__
+code/.ipynb_checkpoints
+code/.RData
+code/.Rhistory
