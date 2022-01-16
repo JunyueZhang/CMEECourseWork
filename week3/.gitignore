@@ -2,4 +2,7 @@ sandbox/*
 !sandbox/.gitkeep
 results/*
 !results/.gitkeep
-.Rhistory
+code/.RData
+code/.Rhistory
+code/Rplots.pdf
+code/Test.sqlite

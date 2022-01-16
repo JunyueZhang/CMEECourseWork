@@ -1,4 +1,8 @@
-a <- read.table("../data/Results.txt", header = TRUE)
+# install.packages("ggplot2")
+require(ggplot2) # load the ggplot2 package
+
+# use the ggplot geom text to annotate a plot
+a <- read.table("../data/Results.txt", header = TRUE) # read the table
 a$ymin <- rep(0, dim(a)[1]) # append a column of zeros
 pdf("../results/MyBars.pdf")
 # Print the first linerange

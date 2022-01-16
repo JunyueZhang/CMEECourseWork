@@ -1,3 +1,4 @@
+# some examples of functions with conditionals
 # Checks if an integer is even
 is.even <- function(n = 2){
   if (n %% 2 == 0)
@@ -7,6 +8,7 @@ is.even <- function(n = 2){
     return(paste(n, 'is odd!'))
   }
 }
+# call function is.even
 is.even(6)
 is.even(7)
 
@@ -19,6 +21,7 @@ is.power2 <- function(n = 2){
     return(paste(n, 'is not a power of 2!'))
   }
 }
+# call function is.power2
 is.power2(4)
 is.power2(32)
 is.power2(43)
@@ -39,6 +42,7 @@ is.prime <- function(n){
   }
 }
 
+# call function is.prime
 is.prime(3)
 is.prime(7)
 is.prime(0)

@@ -1,3 +1,5 @@
+#install.packages("ggplot2")
+require(ggplot2) # load the ggplot2 package
 
 build_ellipse <- function(hradius, vradius){ # function that returns an ellipse
   npoints = 250

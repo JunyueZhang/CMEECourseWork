@@ -1,10 +1,13 @@
 load("../data/GPDDFiltered.RData") # load GPDDFiltered.RData
+#install.packages("maps")
 require(maps) # load maps package
 
+## plot the map
 map(database ="world", col="grey", fill=TRUE, bg="white", lwd=0.5, mar=rep(0,4), border=0, ylim=c(-80,80)) # create a world map
 for (i in 1:nrow(gpdd)) {
   points(gpdd$long[i], gpdd$lat[i], cex = 1.2, pch = 19, col = "red")
 }
+
 # superimpose on the map all the locations from which we have data in the GPDD dataframe
 
 

@@ -1,4 +1,7 @@
+rm(list = ls())
+graphics.off()
 MyDF <- read.csv("../data/EcolArchives-E089-51-D1.csv") # import csv data to a data frame
+#install.packages("tidyverse")
 require(tidyverse) # load the tidyverse package
 dplyr::glimpse(MyDF) # inspect and explore data
 MyDF$Type.of.feeding.interaction <- as.factor(MyDF$Type.of.feeding.interaction) # change the type to factor

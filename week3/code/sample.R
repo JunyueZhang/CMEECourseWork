@@ -6,7 +6,7 @@ myexperiment <- function(popn, n){
   return(mean(pop_sample))
 }
 
-## Calculate means using a for loop without preallocation:
+## Calculate means using a FOR loop on a vector without preallocation:
 loopy_sample1 <- function(popn, n, num){
   result1 <- vector() #Initialize empty vector of size 1
   for (i in 1:num){
@@ -15,7 +15,7 @@ loopy_sample1 <- function(popn, n, num){
   return(result1)
 }
 
-## To run "num" iterations of the experiment using a for loop on a vector with preallocation:
+## To run "num" iterations of the experiment using a FOR loop on a vector with preallocation:
 loopy_sample2 <- function(popn, n, num){
   result2 <- vector(,num) # Preallocate expected size
   for (i in 1:num){
@@ -24,7 +24,7 @@ loopy_sample2 <- function(popn, n, num){
   return(result2)
 }
 
-## To run "num" iterations of the experiment using a for loop on a list with preallocation:
+## To run "num" iterations of the experiment using a FOR loop on a list with preallocation:
 loopy_sample3 <- function(popn, n, num){
   result3 <- vector("list", num) #Preallocate expected size
   for(i in 1:num){
@@ -39,15 +39,15 @@ lapply_sample <- function(popn, n, num){
   return(result4)
 }
 
-## To run "num" iterations of the experiment using vectorization with lapply:
+## To run "num" iterations of the experiment using vectorization with sapply:
 sapply_sample <- function(popn, n, num){
   result5 <- sapply(1:num, function(i) myexperiment(popn, n))
   return(result5)
 }
 
-set.seed(12345)
+set.seed(12345) # set seed
 popn <- rnorm(10000) # Generate the population
-hist(popn)
+hist(popn) # generate a histogram
 
 n <- 100 # sample size for each experiment
 num <- 10000 # Number of times to rerun the experiment

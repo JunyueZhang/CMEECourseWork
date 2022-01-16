@@ -1,11 +1,5 @@
 \documentclass[10pt, a4paper]{article}
 \usepackage{graphicx}
-\graphicspath{ {images/} }
-\usepackage[
-backend=biber,
-style=alphabetic,
-sorting=ynt
-]{biblatex}
 \usepackage{geometry}
  \geometry{
  a4paper,
@@ -13,17 +7,7 @@ sorting=ynt
  left=20mm,
  top=20mm,
  }
- \usepackage[acronym]{glossaries}
-\usepackage{optidef}
-\addbibresource{mybibliography.bib}
-\makeglossaries
-\newglossaryentry{entryOne}
-{
-        name=Glossary Entry,
-        description={Glossary entries are used to provide definitions for words in your document}
-}    
-
-
+ 
 \title{Is Florida getting warmer}
 
 \author{Junyue Zhang}
@@ -43,16 +27,16 @@ sorting=ynt
     It can be speculated that the temperatures of Florida are increasing with years.  
     Therefore, Florida is considered getting warmer over years.
 
-  \section{Results}
+  \section{Conclusion}
     After applying a distribution of random correlation coefficients between Florida temperature and time, it can be concluded that Florida is getting warmer over years.
 
 \begin{figure}[h]
   \centering
-  \includegraphics[scale = 0.3]{../results/Florida_warming.png}
-  \caption{Scatter Plot with the Correlation Coefficient}
+  \includegraphics[scale = 0.3]{./histogram_of_rcc.png}
+  \caption{Histogram of Correlation Coefficients}
   \label{figure1}
 \end{figure}
-Figure \ref{figure1} shows a scatter plot with the correlation coefficient.
+Figure \ref{figure1} shows a histogram of correlation coefficients.
 
 
 \end{document}

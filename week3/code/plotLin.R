@@ -1,3 +1,8 @@
+#install.packages("ggplot2")
+require(ggplot2) # load the ggplot2 package
+
+# try mathematical annotation of an axis as well as within the plot area
+# create some linear regression data
 x <- seq(0, 100, by = 0.1)
 y <- -4. + 0.25 * x +
   rnorm(length(x), mean = 0., sd = 2.5)

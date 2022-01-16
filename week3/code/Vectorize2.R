@@ -46,8 +46,8 @@ stochrickvect <- function(p0 = runif(1000, .5, 1.5), r = 1.2, K = 1, sigma = 0.2
 
 
 print("Stochastic Ricker takes:")
-print(system.time(res1 <- stochrick())) # calculate how much time the function stochrick takes
+print(system.time(res1 <- stochrick())) # print how much time the function stochrick takes
 
 
 print("Vectorized Stochastic Ricker takes:")
-print(system.time(res2 <- stochrickvect())) # calculate how much time the function stochrickvect takes
+print(system.time(res2 <- stochrickvect())) # print how much time the function stochrickvect takes

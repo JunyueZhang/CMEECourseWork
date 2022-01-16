@@ -25,13 +25,3 @@ p_value <- count / n # calculate the fraction of the random correlation coeffici
 
 print(paste("The approximate, asymptotic p-value is", p_value)) # print the p-value
 
-
-require(ggpubr)
-# draw a scatter plot with the correlation coefficient
-sp <- ggscatter(ats, x = "Year", y = "Temp",
-                add = "reg.line",  # add a regressin line to the plot
-                add.params = list(color = "blue", fill = "yellow"), # customize the regressin line
-                conf.int = TRUE # add the confidence interval
-)
-
-sp + stat_cor(method = "pearson") # add the correlation coefficient

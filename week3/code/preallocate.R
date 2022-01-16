@@ -3,11 +3,12 @@ NoPreallocFun <- function(x){
   for (i in 1:x){
     a <- c(a, i)
     print(a)
-    print(object.size(a))
+    print(object.size(a)) # provide an estimate of the memory that is being used to store an R object
   }
 }
 
-system.time(NoPreallocFun(10))
+system.time(NoPreallocFun(10)) # return CPU Time Used
+
 
 
 PreallocFun <- function(x){
@@ -15,8 +16,8 @@ PreallocFun <- function(x){
   for (i in 1:x){
     a[i] <- i
     print(a)
-    print(object.size(a))
+    print(object.size(a)) # provide an estimate of the memory that is being used to store an R object
   }
 }
 
-system.time(PreallocFun(10))
+system.time(PreallocFun(10)) # return CPU Time Used

@@ -5,10 +5,10 @@ M <- matrix(rnorm(100), 10, 10)
 RowMeans <- apply(M, 1, mean)
 print(RowMeans)
 
-## Now the variance
+## Take the variance of each row
 RowVars <- apply(M, 1, var)
 print(RowVars)
 
-## By column
+## Take the mean of each column
 ColMeans <- apply(M, 2, mean)
 print(ColMeans)

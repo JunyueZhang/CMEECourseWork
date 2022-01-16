@@ -1,3 +1,4 @@
+#install.packages("ggplot2")
 require(ggplot2) # load ggplot2 package
 MyDF <- read.csv("../data/EcolArchives-E089-51-D1.csv") # import csv data to a data frame
 
@@ -9,7 +10,7 @@ p <- ggplot(MyDF, aes(x = Prey.mass,
 q <- p + scale_x_continuous("Prey Mass in grams", trans = 'log10') + 
   scale_y_continuous("Predator mass in grams", trans = 'log10') +
   geom_point(size=I(1), shape=I(3)) + geom_smooth(method = "lm", fullrange = TRUE) +
-  theme_bw() + facet_grid(Type.of.feeding.interaction ~., scales = "free") + theme(legend.position = "bottom", legend.box = "horizontal") + theme(aspect.ratio = 0.5) + guides(color = guide_legend(nrow = 1))
+  theme_bw() + facet_grid(Type.of.feeding.interaction ~., scales = "free") + theme(legend.position = "bottom", legend.box = "horizontal") + theme(aspect.ratio = 0.4) + guides(color = guide_legend(nrow = 1))
 # add layers and other plot elements
 print(q)
 dev.off() # close the graphic window

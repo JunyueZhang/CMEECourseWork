@@ -32,28 +32,29 @@ colnames(TempData) <- MyData[1,] # assign column names from original data
 rownames(TempData) <- NULL
 
 ############# Convert from wide to long format  ###############
+#install.packages("reshape2")
 require(reshape2) # load the reshape2 package
 
-?melt #check out the melt function
+#?melt #check out the melt function
 
 MyWrangledData <- melt(TempData, id=c("Cultivation", "Block", "Plot", "Quadrat"), variable.name = "Species", value.name = "Count")
 
+## convert the columns to factors
 MyWrangledData[, "Cultivation"] <- as.factor(MyWrangledData[, "Cultivation"])
 MyWrangledData[, "Block"] <- as.factor(MyWrangledData[, "Block"])
 MyWrangledData[, "Plot"] <- as.factor(MyWrangledData[, "Plot"])
 MyWrangledData[, "Quadrat"] <- as.factor(MyWrangledData[, "Quadrat"])
-MyWrangledData[, "Count"] <- as.integer(MyWrangledData[, "Count"])
+MyWrangledData[, "Count"] <- as.integer(MyWrangledData[, "Count"]) # convert the column to integer
 
+## Inspect the dataset
 str(MyWrangledData)
 head(MyWrangledData)
 dim(MyWrangledData)
 
 ############# Exploring the data (extend the script below)  ###############
+#install.packages("tidyverse")
 require(tidyverse)
 tidyverse_packages(include_self = TRUE) # the include_self = TRUE means list "tidyverse" as well 
-MyWrangledData <- tibble::as_tibble(MyWrangledData) 
-MyWrangledData
-class(MyWrangledData)
 dplyr::glimpse(MyWrangledData) #like str(), but nicer!
 dplyr::filter(MyWrangledData, Count>100) #like subset(), but nicer!
 dplyr::slice(MyWrangledData, 10:15) # Look at an arbitrary set of data rows
