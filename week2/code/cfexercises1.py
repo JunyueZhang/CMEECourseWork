@@ -30,11 +30,11 @@ def foo_3(x, y, z):
 
     """x, y, z swap values and rearrange."""
     if x > y:
-        tmp = y
+        tmp = y # swap x and y
         y = x
         x = tmp
     if y > z:
-        tmp = z
+        tmp = z # swap z and y
         z = y
         y = tmp
     return [x, y, z]
@@ -44,7 +44,7 @@ def foo_4(x):
     """Calculate the factorial of x."""
     result = 1
     for i in range(1, x + 1):
-        result = result * i
+        result = result * i # calculate the factorial
     return result
 
 
@@ -52,13 +52,13 @@ def foo_5(x):
     """A recursive function that calculates the factorial of x."""
     if x == 1:
         return 1
-    return x * foo_5(x - 1)
+    return x * foo_5(x - 1) # use the recursive function
 
 
 def foo_6(x):
     """Calculate the factorial of x in a different way."""
     facto = 1
-    while x >= 1:
+    while x >= 1: # use while loop
         facto = facto * x
         x = x -1
     return facto

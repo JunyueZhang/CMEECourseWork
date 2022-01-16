@@ -20,7 +20,7 @@ for k in my_list:
 total = 0
 summands = [0, 1, 11, 111, 1111]
 for s in summands:
-    total = total + s
+    total = total + s # calculate the sum of summands
     print(total)
 
 # WHILE loops in Python
@@ -29,7 +29,3 @@ while z < 100:
     z = z + 1
     print(z)
 
-b = True
-while b:
-    print("GERONIMO! infinite loop! ctrl+c to stop!")
-# ctrl + c to stop!

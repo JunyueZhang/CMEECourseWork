@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-"""Expand the previous debugme.py example to understand how this works."""
+"""This script expands the previous debugme.py example to understand how this works."""
 
 __appname__ = '[application name here]'
 __author__ = 'Junyue (jz1621@ic.ac.uk)'
@@ -15,7 +15,7 @@ def buggyfunc(x):
         try:
             y = y-1
             z = x/y
-        except ZeroDivisionError:
+        except ZeroDivisionError: # catch specific types of errors
             print(f"The result of dividing a number by zero is undefined")
         except:
             print(f"This didn't work; x = {x}; y = {y}") 
@@ -23,4 +23,4 @@ def buggyfunc(x):
             print(f"OK; x = {x}; y = {y}, z = {z};")       
     return z  
 
-buggyfunc(20)
+buggyfunc(20) # call the function buggyfunc

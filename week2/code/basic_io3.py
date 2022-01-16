@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-"""Save an object (even complex) for later use and load the data again."""
+""" This script saves an object (even complex) for later use and loads the data again."""
 
 
 __appname__ = '[application name here]'

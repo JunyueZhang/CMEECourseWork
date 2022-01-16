@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-""" Print a tuple of tuples of length three: latin name, common name, mass, on a separate line or output block by species."""
+""" This script prints a tuple of tuples of length three: latin name, common name, mass, on a separate line or output block by species."""
 
 __appname__ = '[application name here]'
 __author__ = 'Junyue (jz1621@ic.ac.uk)'
@@ -27,15 +27,17 @@ birds = ( ('Passerculus sandwichensis','Savannah sparrow',18.7),
 
 # Hints: use the "print" command! You can use list comprehensions!
 
-Latin_name = [i[0] for i in birds]
-Common_name = [i[1] for i in birds]
-Mass = [i[2] for i in birds]
+## use list comprehensions
+Latin_name = [i[0] for i in birds] # obtain a list of latin names
+Common_name = [i[1] for i in birds] # obtain a list of common names
+Mass = [i[2] for i in birds] # obtain a list of mass values
 
 #for i in birds:
     #Latin_name.append(i[0])
     #Common_name.append(i[1])
     #Mass.append(i[2])
-    
+
+# print
 print("Latin name: ", Latin_name)
 print("Common name: ", Common_name)
 print("Mass: ", Mass)

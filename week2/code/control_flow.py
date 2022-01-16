@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-"""Some functions exemplifying the use of control statements"""
+"""This script shows some functions exemplifying the use of control statements."""
 #docstrings are considered part of the running code (normal comments are
 #stripped). Hence, you can access your docstrings at run time.
 
@@ -23,13 +23,13 @@ def even_or_odd(x=0): # if not specified, x should take value 0.
 def largest_divisor_five(x=120):
     """Find which is the largest divisor of x among 2,3,4,5."""
     largest = 0
-    if x % 5 == 0:
+    if x % 5 == 0: # check if x is divisible by 5
         largest = 5
-    elif x % 4 == 0: #means "else, if"
+    elif x % 4 == 0: # check if x is divisible by 4
         largest = 4
-    elif x % 3 == 0:
+    elif x % 3 == 0: # check if x is divisible by 3
         largest = 3
-    elif x % 2 == 0:
+    elif x % 2 == 0: # check if x is divisible by 2
         largest = 2
     else: # # When all other (if, elif) conditions are not met
         return "No divisor found for %d!" % x # Each function can return a value or a variable.
@@ -38,18 +38,18 @@ def largest_divisor_five(x=120):
 def is_prime(x=70):
     """Find whether an integer is prime."""
     for i in range(2, x): # "range" returns a sequence of integers
-        if x % i == 0:
+        if x % i == 0: # check if x is prime
             print("%d is not a prime: %d is a divisor" % (x, i))
             return False
     print("%d is a prime!" % x)
     return True
 
 def find_all_primes(x=22):
-    """Find all the primes up to x"""
+    """Find all the primes up to x."""
     allprimes = []
     for i in range(2, x + 1):
-        if is_prime(i):
-            allprimes.append(i)
+        if is_prime(i): # check if x is prime
+            allprimes.append(i) # append prime
     print("There are %d primes between 2 and %d" % (len(allprimes), x))
     return allprimes
 
@@ -57,7 +57,7 @@ def find_all_primes(x=22):
 
 ## functions ##
 def main(argv):
-    """ Main entry point of the program """
+    """ Main entry point of the program. """
     print(even_or_odd(22))
     print(even_or_odd(33))
     print(largest_divisor_five(120))

@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
-"""Read a file containing: 'Species','Infraorder','Family','Distribution','Body mass male (Kg)."""
-"""write a file containing only species name and Body mass."""
+"""This script reads a file containing 'Species','Infraorder','Family','Distribution','Body mass male (Kg)' and writes a file containing only species name and Body mass."""
 
 __appname__ = '[application name here]'
 __author__ = 'Junyue (jz1621@ic.ac.uk)'

@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
-""" Create a list of month, rainfall tuples where the amount of rain was greater than 100 mm. """
-""" Create a list of just month names where the amount of rain was less than 50 mm. """
+""" This script creates a list of month, rainfall tuples where the amount of rain was greater than 100 mm and a list of just month names where the amount of rain was less than 50 mm. """
 
 __appname__ = '[application name here]'
 __author__ = 'Junyue (jz1621@ic.ac.uk)'
@@ -37,26 +36,30 @@ rainfall = (('JAN',111.4),
 # A good example output is:
 #
 # Step #1:
-# Months and rainfall values when the amount of rain was greater than 100mm:
+# use a list comprehension to create a list of month,rainfall tuples where
+# the amount of rain was greater than 100 mm.
 AnswerOne = [i for i in rainfall if i[1] > 100]
 print(AnswerOne)
 
 # Step #2:
-# Just month names where the amount of rain was less than 50 mm:
+# use a list comprehension to create a list of just month names where the
+# amount of rain was less than 50 mm.
 AnswerTwo = [i[0] for i in rainfall if i[1] < 50]
 print(AnswerTwo)
 
 # Step #3:
+## define two empty lists
 Greater_than_100_3 = []
 Less_than_50_3 = []
 
 for i in rainfall:
-    if i[1] > 100:
-        Greater_than_100_3.append(i) # Months and rainfall values when the amount of rain was greater than 100mm.
+    if i[1] > 100: # check if the amount of rain was greater than 100 mm
+        Greater_than_100_3.append(i) # append the month and rainfall tuples 
 
 for i in rainfall:
-    if i[1] < 50:
-        Less_than_50_3.append(i[0]) # Just month names where the amount of rain was less than 50 mm.
+    if i[1] < 50: # check if the amount of rain was less than 50 mm
+        Less_than_50_3.append(i[0]) # append month names
 
+## print
 print(Greater_than_100_3)
 print(Less_than_50_3)

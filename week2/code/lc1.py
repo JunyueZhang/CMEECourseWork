@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-""" Write three separate list comprehensions that create three different lists containing the latin names, common names and mean body masses for each species in birds, respectively."""
+""" This script writes three separate list comprehensions that create three different lists containing the latin names, common names and mean body masses for each species in birds, respectively."""
 
 __appname__ = '[application name here]'
 __author__ = 'Junyue (jz1621@ic.ac.uk)'
@@ -26,25 +26,29 @@ birds = ( ('Passerculus sandwichensis','Savannah sparrow',18.7),
 # A nice example out out is:
 # Step #1:
 
-Latin_names_1 = [i[0] for i in birds]
+## use three separate list comprehensions to create three different lists
+Latin_names_1 = [i[0] for i in birds] 
 Common_names_1 = [i[1] for i in birds]
 Mean_body_masses_1 = [i[2] for i in birds]
 
+## print
 print("Latin names: ", Latin_names_1)
 print("Common names: ", Common_names_1)
 print("Mean body masses: ", Mean_body_masses_1)
 
 #Step #2:
 
+## define three empty lists
 Latin_names_2 = []
 Common_names_2 = []
 Mean_body_masses_2 = []
 
-for i in birds:
-    Latin_names_2.append(i[0])
-    Common_names_2.append(i[1])
-    Mean_body_masses_2.append(i[2])
+for i in birds: 
+    Latin_names_2.append(i[0]) # append latin names
+    Common_names_2.append(i[1]) # append common names
+    Mean_body_masses_2.append(i[2]) # append mean body masses
 
+## print
 print("Latin names: ", Latin_names_2)
 print("Common names: ", Common_names_2)
 print("Mean body masses: ", Mean_body_masses_2)

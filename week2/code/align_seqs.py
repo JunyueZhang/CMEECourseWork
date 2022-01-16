@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-"""Convert align_seqs.py to a Python program that takes the DNA sequences as an input from a single external file and saves the best alignment along with its corresponding score in a single text file."""
+""" This script converts align_seqs.py to a Python program that takes the DNA sequences as an input from a single external file and saves the best alignment along with its corresponding score in a single text file."""
 
 __appname__ = '[application name here]'
 __author__ = 'Junyue (jz1621@ic.ac.uk)'
@@ -66,18 +66,15 @@ def calculate_score(s1, s2, l1, l2, startpoint):
 # calculate_score(s1, s2, l1, l2, 5)
 
 # now try to find the best match (highest score) for the two sequences
-
-
-
 def main(argv):
     """ Main entry point of the program. """
     my_best_align = None
     my_best_score = -1
-    for i in range(l1): # Note that you just take the last alignment with the highest score
-        z = calculate_score(s1, s2, l1, l2, i)
-        if z > my_best_score:
-            my_best_align = "." * i + s2 # think about what this is doing!
-            my_best_score = z 
+    for i in range(l1): # take the last alignment with the highest score
+        z = calculate_score(s1, s2, l1, l2, i) # call the function calculate_score
+        if z > my_best_score: # if z is greater than the previous best score
+            my_best_align = "." * i + s2 # get the best alignment
+            my_best_score = z # get the best score
     print(my_best_align)
     print(s1)
     print ("Best score:", my_best_score)

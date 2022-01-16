@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-"""This script shows writing code into a script and running it instead of pasting or sending code to the Python command prompt."""
+""" This script shows an example of writing code into a script and running it instead of pasting or sending code to the Python command prompt."""
 
 __appname__ = '[application name here]'
 __author__ = 'Junyue (jz1621@ic.ac.uk)'

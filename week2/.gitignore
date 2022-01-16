@@ -2,6 +2,4 @@ sandbox/*
 !sandbox/.gitkeep
 results/*
 !results/.gitkeep
-code/__*
-code/align_seqs_better.py
-code/align_seqs_fasta.py
+code/__pycache__
