@@ -7,13 +7,13 @@
 
 file=$1
 echo "Please enter the correct script name."
-if [ "${file##*.}"x = "csv"x ]; then
-    if [ ! -f "$file" ]; then
+if [ "${file##*.}"x = "csv"x ]; then # check if the file is a .csv file
+    if [ ! -f "$file" ]; then # check if the file exists
         echo "Sorry, File $file doesn't exist, please check!"
         exit 0
     else
         echo "File $file exists, let's continue!"
-        if [ ! -s "$file" ]; then
+        if [ ! -s "$file" ]; then # check if the file is null
             echo "The file $file is null, please check."
             exit 0
         else
@@ -28,7 +28,7 @@ if [ "${file##*.}"x = "csv"x ]; then
         fi 
     fi
 else
-    echo "Sorry, this file is not .csv file, please check!"
+    echo "Sorry, this file is not a .csv file, please check!"
     exit 0  
 fi
 

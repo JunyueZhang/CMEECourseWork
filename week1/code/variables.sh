@@ -19,7 +19,7 @@ echo "The second argument is $2"
 # Assigned Variables; Explicit declaration:
 echo "Please enter the correct script name."
 MY_VAR='some string'
-if [ -z "$MY_VAR" ]; then
+if [ -z "$MY_VAR" ]; then # check if the variable is null
     echo "The variable is null, please check."
     exit 0
 else
@@ -32,7 +32,7 @@ echo
 echo 'Please enter a new string'
 read MY_VAR
 echo
-if [ -z "$MY_VAR" ]; then
+if [ -z "$MY_VAR" ]; then # check if the variable is null
     echo "The variable is null, please check."
     exit
 else
@@ -48,13 +48,13 @@ read a b
 echo
 
 
-if ([ -z "$a" ]) | ([ -z "$b" ]); then
+if ([ -z "$a" ]) | ([ -z "$b" ]); then # check if the variable is null
     echo "The variable is null, please check!"
     exit
 else
     echo "The variable is non-null, let's move on!" 
     echo 'you entered' $a 'and' $b '; Their sum is:'
-    MY_SUM=$(expr $a + $b)
+    MY_SUM=$(expr $a + $b) # obtain the sum
     echo $MY_SUM
     echo "Well Done!"
 fi

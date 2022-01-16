@@ -1,0 +1,9 @@
+*~ 
+*.tmp
+sandbox/*
+!sandbox/.gitkeep
+results/*
+!results/.gitkeep
+code/.csv
+code/.lo
+
