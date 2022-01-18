@@ -3,7 +3,7 @@ load("../data/KeyWestAnnualMeanTemperature.RData") # load the annual temperature
 ls()
 cc <- cor(x = ats[,"Year"], y = ats[,"Temp"], use = "everything", method = "pearson")
 # compute the appropriate correlation coefficient between years and Temperature
-n <- 100
+n <- 10000
 rcc <- c()
 for (i in 1:n){
     ats[,"Temp"] <- sample(ats[,"Temp"])
@@ -24,4 +24,4 @@ p_value <- count / n # calculate the fraction of the random correlation coeffici
 
 
 print(paste("The approximate, asymptotic p-value is", p_value)) # print the p-value
-
+hist(rcc, xlab = "Correlation Coefficient", xlim = c(-0.4, 0.4), ylim = c(0, 2000), col = "pink", main = "Histogram of correlation coefficients")
