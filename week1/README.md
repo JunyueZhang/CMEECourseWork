@@ -8,7 +8,7 @@ The bash script [CompileLaTeX.sh](https://mhasoba.github.io/TheMulQuaBio/noteboo
 And the rest of the shell scripts are modified based on the existing ones in the [Shell scripting chapter](https://mhasoba.github.io/TheMulQuaBio/notebooks/02-ShellScripting.html#a-useful-shell-scripting-example) to improve robustness.
 The writeup directory holds the LaTeX written work and compiled pdf of the written report.
 ## Languages
-The languages used in week1 are UNIX commands (Ubuntu 20.04.3) and bash shell.
+The languages used in week1 are UNIX commands (Ubuntu 20.04.3), bash shell, and LaTeX.
 
 ## Dependencies
 The shell script tiff2png.sh needs to install imagemagick. LaTeX is also necessary to be installed to run the CompileLaTeX.sh.

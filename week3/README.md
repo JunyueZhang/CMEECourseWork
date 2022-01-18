@@ -7,7 +7,7 @@ And the writeup directory holds the LaTeX written work and compiled pdf of the w
 Before running the scripts, there are some packages requested to be installed: tidyverse, ggplot2, reshape2, maps, sqldf.
 
 ## Languages
-The language used in week3 is R.
+The languages used in week3 are R and LaTeX.
 
 
 ## Dependencies
