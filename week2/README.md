@@ -37,6 +37,9 @@ The week2 part includes code, data, results, sandbox. There are some python scri
 + The script boilerplate.py shows a template program.
 + The script MyExampleScript.py shows an example of writing code into a script and running it instead of pasting or sending code to the Python command prompt.
 + The script basic_csv.py reads a file containing 'Species','Infraorder','Family','Distribution','Body mass male (Kg)' and writes a file containing only species name and Body mass.
++ The script align_seqs_fasta.py takes any two fasta sequences (in separate files) to be aligned as input.
++ The script align_seqs_better.py records and saves all the equally-best alignments.
+
 All the scripts can be easily run with the python command and correct script name.
 
 ## Author name and contact

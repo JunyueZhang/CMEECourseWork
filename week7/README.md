@@ -22,7 +22,9 @@ The week7 part includes code, data, results, and sandbox. There are a number of 
 + The profileme2.py script tries an alternative approach to write the illustrative program.
 + The MyFirstJupyterNb.ipynb script shows a simple Jupyter program.
 + The TestR.py script and TestR.R script create a simple program to illustrate running R from Python easily.
-+ The timeitme.py script uses the timeit module to figure out the best way to do something specific as part of a larger program (say a particular command or a loop). 
++ The timeitme.py script uses the timeit module to figure out the best way to do something specific as part of a larger program (say a particular command or a loop).
++ The grp_oaks_debugme.py script excludes the header row in its search for oaks in a given dataset and includes the column headers ("Genus", "species").
+
 All the scripts can be easily run with the correct command and script name.
 
 ## Author name and contact

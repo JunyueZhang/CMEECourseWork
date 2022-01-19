@@ -7,7 +7,6 @@ map(database ="world", col="grey", fill=TRUE, bg="white", lwd=0.5, mar=rep(0,4),
 for (i in 1:nrow(gpdd)) {
   points(gpdd$long[i], gpdd$lat[i], cex = 1.2, pch = 19, col = "red")
 }
-
 # superimpose on the map all the locations from which we have data in the GPDD dataframe
 
 
