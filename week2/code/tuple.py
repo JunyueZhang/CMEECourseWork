@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
-""" This script prints a tuple of tuples of length three: latin name, common name, mass, on a separate line or output block by species."""
+""" This script prints birds' latin names, common names, and mass on a separate line."""
 
-__appname__ = '[application name here]'
+__appname__ = '[tuple.py]'
 __author__ = 'Junyue (jz1621@ic.ac.uk)'
 __version__ = '0.0.1'
 __license__ = "License for this code/program"
@@ -37,7 +37,7 @@ Mass = [i[2] for i in birds] # obtain a list of mass values
     #Common_name.append(i[1])
     #Mass.append(i[2])
 
-# print
+# print out
 print("Latin name: ", Latin_name)
 print("Common name: ", Common_name)
 print("Mass: ", Mass)

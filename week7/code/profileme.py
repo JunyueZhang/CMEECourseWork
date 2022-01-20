@@ -2,7 +2,7 @@
 
 """ This script includes several functions to show profiling the code and locating the sections of the code where speed bottlenecks exist."""
 
-__appname__ = '[application name here]'
+__appname__ = '[profileme.py]'
 __author__ = 'Junyue (jz1621@ic.ac.uk)'
 __version__ = '0.0.1'
 __license__ = "License for this code/program"

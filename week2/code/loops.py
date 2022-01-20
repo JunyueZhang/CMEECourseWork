@@ -2,7 +2,7 @@
 
 """This script shows some loops examples."""
 
-__appname__ = '[application name here]'
+__appname__ = '[loops.py]'
 __author__ = 'Junyue (jz1621@ic.ac.uk)'
 __version__ = '0.0.1'
 __license__ = "License for this code/program"

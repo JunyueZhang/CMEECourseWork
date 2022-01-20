@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
-"""This script shows several examples about understanding global variables and local variables. """
+"""This script shows several examples about global variables and local variables. """
 
-__appname__ = '[application name here]'
+__appname__ = '[scope.py]'
 __author__ = 'Junyue (jz1621@ic.ac.uk)'
 __version__ = '0.0.1'
 __license__ = "License for this code/program"

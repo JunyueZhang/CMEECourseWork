@@ -4,7 +4,7 @@
 #docstrings are considered part of the running code (normal comments are
 #stripped). Hence, you can access your docstrings at run time.
 
-__appname__ = '[application name here]'
+__appname__ = '[control_flow.py]'
 __author__ = 'Junyue (jz1621@ic.ac.uk)'
 __version__ = '0.0.1'
 __license__ = "License for this code/program"
@@ -57,7 +57,7 @@ def find_all_primes(x=22):
 
 ## functions ##
 def main(argv):
-    """ Main entry point of the program. """
+    """ Call the functions exemplifying the use of control statements above. """
     print(even_or_odd(22))
     print(even_or_odd(33))
     print(largest_divisor_five(120))

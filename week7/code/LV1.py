@@ -2,7 +2,7 @@
 
 """ This script can generate two figures about Consumer-Resource population dynamics for the Lotka-Volterra (LV) model. """
 
-__appname__ = '[application name here]'
+__appname__ = '[LV1.py]'
 __author__ = 'Junyue (jz1621@ic.ac.uk)'
 __version__ = '0.0.1'
 __license__ = "License for this code/program"

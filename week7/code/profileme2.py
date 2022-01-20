@@ -2,7 +2,7 @@
 
 """ This script tries an alternative approach to write the illustrative program."""
 
-__appname__ = '[application name here]'
+__appname__ = '[profileme2.py]'
 __author__ = 'Junyue (jz1621@ic.ac.uk)'
 __version__ = '0.0.1'
 __license__ = "License for this code/program"

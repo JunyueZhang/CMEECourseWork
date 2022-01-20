@@ -2,7 +2,7 @@
 
 """This program includes six functions of conditionals."""
 
-__appname__ = '[application name here]'
+__appname__ = '[cfexercises1.py]'
 __author__ = 'Junyue (jz1621@ic.ac.uk)'
 __version__ = '0.0.1'
 __license__ = "License for this code/program"
@@ -64,7 +64,7 @@ def foo_6(x):
     return facto
 
 def main(argv):
-    """Main entry point of the program."""
+    """ Call the functions of conditionals above. """
     print(foo_1(9))
     print(foo_1(64))
     print(foo_2(88, 66))

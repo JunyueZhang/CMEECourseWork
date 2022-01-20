@@ -2,7 +2,7 @@
 
 """ This script converts align_seqs.py to a Python program that takes the DNA sequences as an input from a single external file and saves the best alignment along with its corresponding score in a single text file."""
 
-__appname__ = '[application name here]'
+__appname__ = '[align_seqs.py]'
 __author__ = 'Junyue (jz1621@ic.ac.uk)'
 __version__ = '0.0.1'
 __license__ = "License for this code/program"
@@ -40,7 +40,7 @@ else:
 # from arbitrary startpoint (chosen by user)
 
 def calculate_score(s1, s2, l1, l2, startpoint):
-    """count the “score” as total of number of bases matched"""
+    """ count the score as total of number of bases matched. """
     matched = "" # to hold string displaying alignements
     score = 0
     for i in range(l2):
@@ -67,7 +67,7 @@ def calculate_score(s1, s2, l1, l2, startpoint):
 
 # now try to find the best match (highest score) for the two sequences
 def main(argv):
-    """ Main entry point of the program. """
+    """ Find the best match (highest score) for the two sequences. """
     my_best_align = None
     my_best_score = -1
     for i in range(l1): # take the last alignment with the highest score

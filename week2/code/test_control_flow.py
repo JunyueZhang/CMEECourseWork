@@ -4,7 +4,7 @@
 #docstrings are considered part of the running code (normal comments are
 #stripped). Hence, you can access your docstrings at run time.
 
-__appname__ = '[application name here]'
+__appname__ = '[test_control_flow.py]'
 __author__ = 'Junyue (jz1621@ic.ac.uk)'
 __version__ = '0.0.1'
 __license__ = "License for this code/program"
@@ -45,9 +45,11 @@ def even_or_odd(x=0): # if not specified, x should take value 0.
 
 ## functions ##
 def main(argv):
-    """ Main entry point of the program """
+    """ Call the function even_or_odd. """
     print(even_or_odd(22))
     print(even_or_odd(33))
+    print(even_or_odd(44))
+    print(even_or_odd(55))
     return 0
 
 if (__name__ == "__main__"):

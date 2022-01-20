@@ -11,7 +11,7 @@ The languages used in week3 are R, python, bash, and LaTeX.
 
 
 ## Dependencies
-For the week3 section, there are some useful R packages such as tidyverse needed to be installed. Requiring tidyverse will load the core tidyverse packages: ggplot2, for data visualisation; dplyr, for data manipulation; tidyr, for data tidying. To be more specific, tidyverse, ggplot2, reshape2, maps, and sqldf these packages need to be installed before running the Rscripts. To run the get_TreeHeight.py script, these packages need to be imported: sys, pandas, and numpy.
+For the week3 section, there are some useful R packages such as tidyverse needed to be installed. Requiring tidyverse will load the core tidyverse packages: ggplot2, for data visualisation; dplyr, for data manipulation; tidyr, for data tidying. To be more specific, tidyverse, ggplot2, reshape2, maps, and sqldf these packages need to be installed before running the Rscripts. To run the get_TreeHeight.py script, these python packages need to be imported: sys, pandas, and numpy.
 
 ## Installation
 Packages can be easily built and shared by users through cran.r-project.org. A package can be installed by using the install.packages() command. In Ubuntu, the bash terminal can also be adopted to install a package by typing "sudo apt install r-cran-package-name".

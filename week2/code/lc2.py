@@ -2,7 +2,7 @@
 
 """ This script creates a list of month, rainfall tuples where the amount of rain was greater than 100 mm and a list of just month names where the amount of rain was less than 50 mm. """
 
-__appname__ = '[application name here]'
+__appname__ = '[lc2.py]'
 __author__ = 'Junyue (jz1621@ic.ac.uk)'
 __version__ = '0.0.1'
 __license__ = "License for this code/program"
@@ -60,6 +60,6 @@ for i in rainfall:
     if i[1] < 50: # check if the amount of rain was less than 50 mm
         Less_than_50_3.append(i[0]) # append month names
 
-## print
+## print out
 print(Greater_than_100_3)
 print(Less_than_50_3)

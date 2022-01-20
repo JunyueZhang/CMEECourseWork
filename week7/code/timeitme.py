@@ -2,7 +2,7 @@
 
 """ This script uses the timeit module to figure out the best way to do something specific as part of a larger program (say a particular command or a loop). """
 
-__appname__ = '[application name here]'
+__appname__ = '[timeitme.py]'
 __author__ = 'Junyue (jz1621@ic.ac.uk)'
 __version__ = '0.0.1'
 __license__ = "License for this code/program"

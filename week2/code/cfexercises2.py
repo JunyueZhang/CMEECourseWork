@@ -2,7 +2,7 @@
 
 """ This program includes six functions of loops and conditionals combined."""
 
-__appname__ = '[application name here]'
+__appname__ = '[cfexercises2.py]'
 __author__ = 'Junyue (jz1621@ic.ac.uk)'
 __version__ = '0.0.1'
 __license__ = "License for this code/program"

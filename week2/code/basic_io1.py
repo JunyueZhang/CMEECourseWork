@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 
-"""This script opens a file for reading, use "implicit" for loop. If the object is a file, python will cycle over lines."""
+"""This script opens a file for reading, using "implicit" for loop. If the object is a file, python will cycle over lines."""
 
 
-__appname__ = '[application name here]'
+__appname__ = '[basic_io1.py]'
 __author__ = 'Junyue (jz1621@ic.ac.uk)'
 __version__ = '0.0.1'
 __license__ = "License for this code/program"

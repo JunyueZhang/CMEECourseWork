@@ -2,7 +2,7 @@
 
 """This script expands the previous debugme.py example to understand how this works."""
 
-__appname__ = '[application name here]'
+__appname__ = '[debugme.py]'
 __author__ = 'Junyue (jz1621@ic.ac.uk)'
 __version__ = '0.0.1'
 __license__ = "License for this code/program"

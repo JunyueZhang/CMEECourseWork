@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
-""" This script can modify doctests appropriately and the script such that it can handle cases where there is a typo (such as ‘Quercuss’) or there is a genus name that is not strictly ‘Quercus’. """
+""" This script can handle cases where there is a typo (such as ‘Quercuss’) or there is a genus name that is not strictly ‘Quercus’. """
 
-__appname__ = '[application name here]'
+__appname__ = '[oaks_debugme.py]'
 __author__ = 'Junyue (jz1621@ic.ac.uk)'
 __version__ = '0.0.1'
 __license__ = "License for this code/program"
@@ -14,7 +14,7 @@ import doctest # import the doctest module
 
 # define function is_an_oak
 def is_an_oak(name):
-    """ Returns True if name is matching with 'quercus'. 
+    """ Returns True if the name is matching with 'quercus' case-insensitively. 
 
     >>> is_an_oak('Genus')
     False
@@ -43,7 +43,7 @@ def is_an_oak(name):
     
 
 def main(argv):
-    """ Main entry point of the program. """ 
+    """ open a csv file to check if the name is matching with 'quercus' case-insensitively and then write the output csvfile. """ 
 
     f = open('../data/TestOaksData.csv','r') # open a .csv file
     g = open('../data/JustOaksData.csv','w') # save a .csv file
@@ -54,7 +54,7 @@ def main(argv):
         print(row)
         print ("The genus is: ") 
         print(row[0] + '\n')
-        if is_an_oak(row[0]): # check if the name is matching with 'quercus'.
+        if is_an_oak(row[0]): # check if the name is matching with 'quercus' case-insensitively.
             print('FOUND AN OAK!\n')
             csvwrite.writerow([row[0], row[1]]) # write to the csv file
 

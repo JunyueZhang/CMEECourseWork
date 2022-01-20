@@ -3,7 +3,7 @@
 
 """ This script helps to understand [__name__ == "__main__"]."""
 
-__appname__ = '[application name here]'
+__appname__ = '[using_name.py]'
 __author__ = 'Junyue (jz1621@ic.ac.uk)'
 __version__ = '0.0.1'
 __license__ = "License for this code/program"
