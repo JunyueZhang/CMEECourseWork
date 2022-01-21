@@ -1,24 +1,24 @@
 ######### Functions ##########
 
 ## A function to take a sample of size n from a population "popn" and return its mean
-myexperiment <- function(popn, n){
+myexperiment <- function(popn,n){
   pop_sample <- sample(popn, n, replace = FALSE)
   return(mean(pop_sample))
 }
 
 ## Calculate means using a FOR loop on a vector without preallocation:
 loopy_sample1 <- function(popn, n, num){
-  result1 <- vector() #Initialize empty vector of size 1
-  for (i in 1:num){
-      result1 <- c(result1, myexperiment(popn, n))
+  result1 <- vector() #Initialize empty vector of size 1 
+  for(i in 1:num){
+    result1 <- c(result1, myexperiment(popn, n))
   }
   return(result1)
 }
 
 ## To run "num" iterations of the experiment using a FOR loop on a vector with preallocation:
 loopy_sample2 <- function(popn, n, num){
-  result2 <- vector(,num) # Preallocate expected size
-  for (i in 1:num){
+  result2 <- vector(,num) #Preallocate expected size
+  for(i in 1:num){
     result2[i] <- myexperiment(popn, n)
   }
   return(result2)
@@ -32,6 +32,7 @@ loopy_sample3 <- function(popn, n, num){
   }
   return(result3)
 }
+
 
 ## To run "num" iterations of the experiment using vectorization with lapply:
 lapply_sample <- function(popn, n, num){
@@ -51,6 +52,8 @@ hist(popn) # generate a histogram
 
 n <- 100 # sample size for each experiment
 num <- 10000 # Number of times to rerun the experiment
+
+## print out ##
 print("Using loops without preallocation on a vector took:" )
 print(system.time(loopy_sample1(popn, n, num)))
 

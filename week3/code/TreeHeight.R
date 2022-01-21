@@ -1,4 +1,4 @@
-
+rm(list=ls()) # remove global environment
 # This function calculates heights of trees given distance of each tree 
 # from its base and angle to its top, using  the trigonometric formula 
 #

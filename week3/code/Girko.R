@@ -3,10 +3,10 @@ require(ggplot2) # load the ggplot2 package
 
 build_ellipse <- function(hradius, vradius){ # function that returns an ellipse
   npoints = 250
-  a <- seq(0, 2 * pi, length = npoints + 1)
+  a <- seq(0, 2 * pi, length = npoints + 1) # create a sequence of elements 
   x <- hradius * cos(a)
   y <- vradius * sin(a)  
-  return(data.frame(x = x, y = y))
+  return(data.frame(x = x, y = y)) # return a data frame
 }
 
 N <- 250 # Assign size of the matrix
@@ -24,17 +24,17 @@ ellDF <- build_ellipse(my_radius, my_radius) # Dataframe to plot the ellipse
 names(ellDF) <- c("Real", "Imaginary") # rename the columns
 
 # plot the eigenvalues
-pdf(file = "../results/Girko.pdf")
+pdf(file = "../results/Girko.pdf") # call the pdf command to start the plot
 p <- ggplot(eigDF, aes(x = Real, y = Imaginary))
 p <- p +
   geom_point(shape = I(3)) +
   theme(legend.position = "none")
 
-# now add the vertical and horizontal line
+# now add the vertical and horizontal lines
 p <- p + geom_hline(aes(yintercept = 0))
 p <- p + geom_vline(aes(xintercept = 0))
 
 # finally, add the ellipse
 p <- p + geom_polygon(data = ellDF, aes(x = Real, y = Imaginary, alpha = 1/20, fill = "red"))
 print(p)
-dev.off()
+dev.off() # run dev.off() to create the file

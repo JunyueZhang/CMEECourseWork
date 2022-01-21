@@ -14,7 +14,7 @@ my_data <- data.frame(x = x, y = y)
 my_lm <- summary(lm(y ~ x, data = my_data))
 
 # plot the data
-pdf("../results/MyLinReg.pdf")
+pdf("../results/MyLinReg.pdf") # call the pdf command to start the plot
 p <-  ggplot(my_data, aes(x = x, y = y,
                           colour = abs(my_lm$residual))
 ) +
@@ -36,4 +36,4 @@ p <- p + geom_text(aes(x = 60, y = 0,
                    colour = "blue")
 
 print(p)
-dev.off()
+dev.off() # run dev.off() to create the file

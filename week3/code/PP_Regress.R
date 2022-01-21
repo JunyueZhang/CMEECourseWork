@@ -1,4 +1,5 @@
-#install.packages("ggplot2")
+rm(list = ls()) # clean the environment
+graphics.off() # shut down all open graphics devices
 require(ggplot2) # load ggplot2 package
 MyDF <- read.csv("../data/EcolArchives-E089-51-D1.csv") # import csv data to a data frame
 
@@ -19,6 +20,8 @@ feedingTypes <- as.list(levels(MyDF$Type.of.feeding.interaction))
 # convert factor to list
 PredatorLifestage <- as.list(levels(MyDF$Predator.lifestage))
 # convert factor to list again
+
+## Initialize vectors ##
 Regression_Slope <- c()
 Regression_Intercept <- c()
 Feeding_Type <- c()

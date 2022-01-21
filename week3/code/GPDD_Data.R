@@ -1,3 +1,5 @@
+rm(list = ls()) # clean the environment
+graphics.off() # shut down all open graphics devices
 load("../data/GPDDFiltered.RData") # load GPDDFiltered.RData
 #install.packages("maps")
 require(maps) # load maps package

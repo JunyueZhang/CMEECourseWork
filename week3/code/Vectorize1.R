@@ -2,17 +2,17 @@ M <- matrix(runif(1000000), 1000, 1000) # generate a matrix with 1000000 uniform
 
 ## define a function called SumAllElements to sum all elements of the matrix ##
 SumAllElements <- function(M){
-  Dimensions <- dim(M)
-  Tot <- 0
+  Dimensions <- dim(M) # get the dimension of the matrix
+  Tot <- 0 # Initialize Tot
   for (i in 1:Dimensions[1]){
     for (j in 1:Dimensions[2]){
-      Tot <- Tot + M[i, j]
+      Tot <- Tot + M[i, j] # calculate the sum of all elements in the matrix
     }
   }
-  return (Tot)
+  return (Tot) # return the sum
 }
 
-## print the time taken ##
+## print out the time taken ##
 print("Using loops, the time taken is:")
 print(system.time(SumAllElements(M)))
 

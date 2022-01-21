@@ -1,6 +1,6 @@
 i <- 0 #Initialize i
     while(i < Inf) {
-      if (i == 10) {
+      if (i == 10) { # when i is equal to 10
         break
       } # Break out of the while loop!
     else {

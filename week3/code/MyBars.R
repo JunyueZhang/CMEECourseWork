@@ -4,7 +4,7 @@ require(ggplot2) # load the ggplot2 package
 # use the ggplot geom text to annotate a plot
 a <- read.table("../data/Results.txt", header = TRUE) # read the table
 a$ymin <- rep(0, dim(a)[1]) # append a column of zeros
-pdf("../results/MyBars.pdf")
+pdf("../results/MyBars.pdf") # call the pdf command to start the plot
 # Print the first linerange
 p <- ggplot(a)
 p <- p + geom_linerange(data = a, aes(
@@ -46,4 +46,4 @@ p <- p + scale_x_continuous("My x axis",
   theme_bw() + 
   theme(legend.position = "none") 
 print(p)
-dev.off()
+dev.off() # run dev.off() to create the file

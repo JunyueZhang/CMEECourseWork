@@ -1,3 +1,4 @@
+# define function doit
 doit <- function(x){
   temp_x <- sample(x, replace = TRUE) # Random Samples and Permutations
   if(length(unique(temp_x)) > 30) {#only take mean if sample was sufficient

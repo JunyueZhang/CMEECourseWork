@@ -1,13 +1,14 @@
 # Runs the stochastic Ricker equation with gaussian fluctuations
 
-rm(list = ls())
+rm(list = ls()) # remove global environment
 
+## define function stochrick ##
 stochrick <- function(p0 = runif(1000, .5, 1.5), r = 1.2, K = 1, sigma = 0.2,numyears = 100)
 {
 
   N <- matrix(NA, numyears, length(p0))  #initialize empty matrix
 
-  N[1, ] <- p0
+  N[1, ] <- p0 # assign p0 to the first row of N
 
   for (pop in 1:length(p0)) { #loop through the populations
 
@@ -29,7 +30,7 @@ stochrick <- function(p0 = runif(1000, .5, 1.5), r = 1.2, K = 1, sigma = 0.2,num
 # print(system.time(res2<-stochrickvect()))
 
 
-
+## define function stochrickvect##
 stochrickvect <- function(p0 = runif(1000, .5, 1.5), r = 1.2, K = 1, sigma = 0.2, numyears = 100) # initialize some parameters
 {
   
@@ -44,7 +45,7 @@ stochrickvect <- function(p0 = runif(1000, .5, 1.5), r = 1.2, K = 1, sigma = 0.2
   return(N) # return the matrix N
 }
 
-
+## print out ##
 print("Stochastic Ricker takes:")
 print(system.time(res1 <- stochrick())) # print how much time the function stochrick takes
 

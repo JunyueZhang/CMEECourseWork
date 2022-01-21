@@ -6,4 +6,4 @@ SomeOperation <- function(v){ # function SomeOperation takes as input v
 }
 
 M <- matrix(rnorm(100), 10, 10) # build a random matrix
-print(apply(M, 1, SomeOperation)) # take the function SomeOperation by row
+print(apply(M, 1, SomeOperation)) # take the function SomeOperation of each row

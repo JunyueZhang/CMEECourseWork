@@ -5,12 +5,12 @@ if (a == TRUE){ # check if a is TRUE
     print("a is FALSE")
     }            
 
-z <- runif(1) ## generate a uniformly distributed random number
-if (z <= 0.5) {print ("Less than a half")} # if z is less than or equal to 0.5, print
+z <- runif(1) # generate a uniformly distributed random number
+if (z <= 0.5) {print ("Less than a half")} # if z is less than or equal to 0.5, print out
 
 ## indent the code for readability
-z <- runif(1)
-if (z <= 0.5) {
+z <- runif(1) # generate a uniformly distributed random number
+if (z <= 0.5) { # if z is less than or equal to 0.5
   print("Less than a half")
 }
 
@@ -26,8 +26,8 @@ for(species in c('Heliodoxa rubinoides', 'Boissonneaua jardini', 'Sula nebouxii'
 }
 
 ## apply the for loop using a pre-existing vector
-v1 <- c("a", "bc", "def")
-for (i in v1){
+v1 <- c("a", "bc", "def") # define a vector
+for (i in v1){ # for every item in the vector
   print(i)
 }
 

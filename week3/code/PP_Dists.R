@@ -1,5 +1,5 @@
-rm(list = ls())
-graphics.off()
+rm(list = ls()) # clean the environment
+graphics.off() # shut down all open graphics devices
 MyDF <- read.csv("../data/EcolArchives-E089-51-D1.csv") # import csv data to a data frame
 #install.packages("tidyverse")
 require(tidyverse) # load the tidyverse package
@@ -14,7 +14,7 @@ while (i <= n){
   plotDF1 <- subset(MyDF, Type.of.feeding.interaction == levels(MyDF$Type.of.feeding.interaction)[i]) # extract the dataset by every feeding type at each iteration
   par(mfg = c(i,1)) # specify which sub-plot to use in proper order
   hist(log10(plotDF1$Predator.mass), xlab = "log10(Predator Mass (g))", ylab = "Count", col = "lightblue", main = paste("Predator Mass by Feeding Interaction Type:", levels(MyDF$Type.of.feeding.interaction)[i])) # plot histogram including labels and title
-  i <- i + 1
+  i <- i + 1 # update i
 }
 dev.off() # close the graphic window
 
@@ -25,7 +25,7 @@ while (i <= n){
   plotDF2 <- subset(MyDF, Type.of.feeding.interaction == levels(MyDF$Type.of.feeding.interaction)[i]) # extract the dataset by every feeding type at each iteration
   par(mfg = c(i,1)) # specify which sub-plot to use in proper order
   hist(log10(plotDF2$Prey.mass), xlab = "log10(Prey Mass (g))", ylab = "Count", col = "yellow", main = paste("Prey Mass by Feeding Interaction Type:", levels(MyDF$Type.of.feeding.interaction)[i])) # plot histogram including labels and title
-  i <- i + 1
+  i <- i + 1 # update i
 }
 dev.off() # close the graphic window
 
@@ -36,7 +36,7 @@ while (i <= n){
   plotDF3 <- subset(MyDF, Type.of.feeding.interaction == levels(MyDF$Type.of.feeding.interaction)[i]) # extract the dataset by every feeding type at each iteration
   par(mfg = c(i,1)) # specify which sub-plot to use in proper order
   hist(log10(plotDF3$Prey.mass / plotDF3$Predator.mass), xlab = "Size Ratio of Prey Mass over Predator Mass", ylab = "Count", col = "red", main = paste("Size Ratio by Feeding Interaction Type:", levels(MyDF$Type.of.feeding.interaction)[i])) # plot histogram including labels and title
-  i <- i + 1
+  i <- i + 1 # update i
 }
 dev.off() # close the graphic window
 

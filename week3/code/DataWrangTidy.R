@@ -1,7 +1,7 @@
 ################################################################
 ################## Wrangling the Pound Hill Dataset ############
 ################################################################
-
+rm(list = ls()) # clean the environment
 #install.packages("tidyverse")
 require(tidyverse) # load the tidyverse package
 
@@ -13,15 +13,15 @@ MyData <- as.matrix(read.csv("../data/PoundHillData.csv", header = FALSE))
 MyMetaData <- read.csv("../data/PoundHillMetaData.csv", header = TRUE, sep = ";")
 
 ############# Inspect the dataset ###############
-head(MyData)
+head(MyData) # get the first parts of the matrix
 dim(MyData) # get the size of the matrix
 dplyr::glimpse(MyData) # str(MyData)
 utils::View(MyData) # fix(MyData) 
-fix(MyMetaData)
+utils::View(MyMetaData) # fix(MyMetaData)
 
 ############# Transpose ###############
 # To get those species into columns and treatments into rows 
-MyData <- t(MyData) 
+MyData <- t(MyData) # calculate transpose of the matrix
 head(MyData)
 dim(MyData) # get the size of the matrix again
 
@@ -37,7 +37,7 @@ rownames(TempData) <- NULL # assign row names to NULL
 ############# Convert from wide to long format  ###############
 
 MyWrangledData <- tidyr::gather(TempData, Species, Count, -c(Cultivation, Block, Plot, Quadrat))
-# convert the data to long format
+# change a wide data format into a long data format
 
 MyWrangledData <- dplyr::transmute(MyWrangledData, Cultivation = as.factor(Cultivation), Block = as.factor(Block), Plot = as.factor(Plot), Quadrat = as.factor(Quadrat), Species = as.factor(Species), Count = as.integer(Count))
 # assign the correct data types to each column
