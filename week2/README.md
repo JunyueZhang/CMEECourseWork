@@ -1,14 +1,17 @@
 # CMEECourseWork Week2
 ## Brief description
-The week2 directory is organized with code, data, results, sandbox, README.md, and .gitignore. There are a few data files downloaded from the [TheMulQuaBio repository](https://github.com/mhasoba/TheMulQuaBio) in the data directory. 
-The sandbox directory includes several test files.
-The code directory contains a number of important python scripts for the practicals in [Python I chapter](https://mhasoba.github.io/TheMulQuaBio/notebooks/05-Python_I.html#practicals).  **There are some python packages needed to be imported to run the scripts: pickle, csv, sys, and doctest.**
+The week2 directory is organized with code, data, results, sandbox, README.md, and .gitignore.  
+There are a few data files downloaded from the [TheMulQuaBio repository](https://github.com/mhasoba/TheMulQuaBio) in the data directory.  
+The sandbox directory includes several test files.  
+The code directory contains a number of important python scripts for the practicals in [Python I chapter](https://mhasoba.github.io/TheMulQuaBio/notebooks/05-Python_I.html#practicals).  
+**There are some python packages needed to be imported to run the scripts: pickle, csv, sys, and doctest.**
 
 ## Languages
 The language used in week2 is python.
 
 ## Dependencies
-There are many useful python packages available in standard libraries, and they can be explicitly installed using "sudo apt install python-packagename". For week2 section, pickle, csv, sys, and doctest packages need to be installed. 
+There are many useful python packages available in standard libraries, and they can be explicitly installed using "sudo apt install python-packagename".  
+For week2 section, pickle, csv, sys, and doctest packages need to be installed. 
 
 ## Installation
 Details for Python packages can be found on the [Python Standard Library](https://docs.python.org/3/library/index.html). 

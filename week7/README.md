@@ -1,8 +1,9 @@
 # CMEECourseWork Week7
 ## Brief description
-The week7 directory is organized with code, data, results, sandbox, README.md, and .gitignore. There are a few data files downloaded from the [TheMulQuaBio repository](https://github.com/mhasoba/TheMulQuaBio) as required in the data directory. 
-The sandbox directory and results directory are used to store test scripts and results for the scripts in the code directory, respectively.
-The code directory contains a number of important python scripts for the  [Python I chapter](https://mhasoba.github.io/TheMulQuaBio/notebooks/05-Python_I.html#id2) and [Python II chapter](https://mhasoba.github.io/TheMulQuaBio/notebooks/06-Python_II.html#practicals).
+The week7 directory is organized with code, data, results, sandbox, README.md, and .gitignore.  
+There are a few data files downloaded from the [TheMulQuaBio repository](https://github.com/mhasoba/TheMulQuaBio) as required in the data directory.  
+The sandbox directory and results directory are used to store test scripts and results for the scripts in the code directory, respectively.  
+The code directory contains a number of important python scripts for the  [Python I chapter](https://mhasoba.github.io/TheMulQuaBio/notebooks/05-Python_I.html#id2) and [Python II chapter](https://mhasoba.github.io/TheMulQuaBio/notebooks/06-Python_II.html#practicals).  
 **And there are some Python packages (numpy, scipy, matplotlib, csv, sys, doctest, subprocess, timeit, time) needed to be imported before running the scripts**.
 
 ## Languages
