@@ -1,7 +1,7 @@
 # CMEECourseWork Week3
 ## Brief description
 The week3 directory is organized with **code**, **data**, results, **writeup**, sandbox, README.md, and .gitignore. There are a few data files downloaded from the [TheMulQuaBio repository](https://github.com/mhasoba/TheMulQuaBio) as required in the data directory. 
-The sandbox directory and results directory are used to store test scripts and results for the scripts in the code directory, respectively.
+The sandbox directory and results directory are used to store test scripts and results for the scripts in the code directory, respectively.  
 The code directory contains a number of important scripts for the  [R chapter](https://mhasoba.github.io/TheMulQuaBio/notebooks/07-R.html#practicals) and [Data Management and Visualization chapter](https://mhasoba.github.io/TheMulQuaBio/notebooks/08-Data_R.html#id3).  And the writeup directory holds the LaTeX written work and compiled pdf documents for [Is Florida getting warmer Exercise](https://mhasoba.github.io/TheMulQuaBio/notebooks/07-R.html#id2) and [Autocorrelation in Florida weather Exercise](https://mhasoba.github.io/TheMulQuaBio/notebooks/07-R.html#id2). 
 **Before running the scripts, there are some packages requested to be installed: tidyverse, ggplot2, reshape2, maps, sqldf**.
 
@@ -46,7 +46,8 @@ The week3 part includes code, data, results, writeup, and sandbox. There are som
 + The get_TreeHeight.R script takes a csv file name from the command line (e.g., get_TreeHeight.R Trees.csv) and outputs the result to a file.
 + The get_TreeHeight.py script is a Python version of get_TreeHeight.R.
 + The run_get_TreeHeight.sh script can test get_TreeHeight.R and get_TreeHeight.py.
-+ The TAutoCorr.R script applies a distribution of random correlation coefficients in temperatures between successive years in Florida.  **The writeup directory contains two LaTeX files called Florida_warming.tex and TAutoCorr.tex respectively. There are two pdf documents about the results and interpretation written in LaTeX for the Florida_warming.R and TAutoCorr.R scripts. There is also a CompileLaTeX.sh script used to compile the LaTeX files.**
++ The TAutoCorr.R script applies a distribution of random correlation coefficients in temperatures between successive years in Florida.  
+**The writeup directory contains two LaTeX files called Florida_warming.tex and TAutoCorr.tex respectively. There are two pdf documents about the results and interpretation written in LaTeX for the Florida_warming.R and TAutoCorr.R scripts. There is also a CompileLaTeX.sh script used to compile the LaTeX files.**
 All the scripts can be easily run with the source command and the correct script name.
 
 ## Author name and contact
