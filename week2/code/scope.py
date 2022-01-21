@@ -81,15 +81,15 @@ def a_function():
     
     print("Before calling a_function2, value of _a_global is", _a_global)
 
-    _a_function2()
+    _a_function2() # call the _a_function2
     
     print("After calling a_function2, value of _a_global is", _a_global)
     
-a_function()
+a_function() # call the a_function
 
 print("The value of a_global in main workspace / namespace now is", _a_global)
 print("================================================================")
-_a_global = 10
+_a_global = 10 # a global variable
 
 def a_function():
     """define a_function to understand global variables and local variables."""

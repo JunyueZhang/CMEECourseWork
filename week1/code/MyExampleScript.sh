@@ -8,7 +8,7 @@
 
 echo "Please enter the correct script name."
 MSG1="Hello"
-MSG2=$USER
+MSG2=$USER # environmental variable
 for v in MSG1 MSG2
 do
     if [ ! -n "$v" ]; then # check if the variables are null

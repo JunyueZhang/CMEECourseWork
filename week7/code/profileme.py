@@ -12,7 +12,7 @@ __license__ = "License for this code/program"
 def my_squares(iters):
     """Return a list of squared values from 0 to (iters-1)."""
 
-    out = []
+    out = [] # Initialize a list
     for i in range(iters):
         out.append(i ** 2) # append the squared value
     return out
@@ -20,7 +20,7 @@ def my_squares(iters):
 # Define the function my_join
 def my_join(iters, string):
     """Return a string of the input string repeatedly for iters times."""
-    out = ''
+    out = '' # Initialize a string
     for i in range(iters):
         out += string.join(", ") # join all the strings separated by a comma
     return out

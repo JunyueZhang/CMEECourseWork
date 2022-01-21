@@ -21,7 +21,7 @@ def foo_1(x):
 def foo_2(x, y):
 
     """Return the larger one of x and y."""
-    if x > y:
+    if x > y: # if x is larger than y
         return x
     return y
 
@@ -43,7 +43,7 @@ def foo_3(x, y, z):
 def foo_4(x):
     """Calculate the factorial of x."""
     result = 1
-    for i in range(1, x + 1):
+    for i in range(1, x + 1): # from 1 to x
         result = result * i # calculate the factorial
     return result
 
@@ -60,7 +60,7 @@ def foo_6(x):
     facto = 1
     while x >= 1: # use while loop
         facto = facto * x
-        x = x -1
+        x = x -1 # x minus 1
     return facto
 
 def main(argv):

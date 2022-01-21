@@ -54,13 +54,13 @@ hello_4(0)
 ########################
 def hello_5(x):
     """for x less than 100, print hello seven times if x equals 31 and once if x equals 18."""
-    while x < 100:
+    while x < 100: # check if x is less than 100
         if x == 31:
             for k in range(7):
                 print('hello') # print hello seven times
         elif x == 18:
             print('hello')
-        x = x + 1
+        x = x + 1 # x plus one
     print(' ')
 
 hello_5(12)
@@ -72,7 +72,7 @@ def hello_6(x, y):
         print("hello! " + str(y))
         y += 1 # increment y by 1 
         if y == 6:
-            break
+            break # if y is 6, jump out of the loop
     print(' ')
 
 hello_6 (True, 0)

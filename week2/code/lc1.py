@@ -31,7 +31,7 @@ Latin_names_1 = [i[0] for i in birds]
 Common_names_1 = [i[1] for i in birds]
 Mean_body_masses_1 = [i[2] for i in birds]
 
-## print
+## print out
 print("Latin names: ", Latin_names_1)
 print("Common names: ", Common_names_1)
 print("Mean body masses: ", Mean_body_masses_1)
@@ -48,7 +48,7 @@ for i in birds:
     Common_names_2.append(i[1]) # append common names
     Mean_body_masses_2.append(i[2]) # append mean body masses
 
-## print
+## print out
 print("Latin names: ", Latin_names_2)
 print("Common names: ", Common_names_2)
 print("Mean body masses: ", Mean_body_masses_2)

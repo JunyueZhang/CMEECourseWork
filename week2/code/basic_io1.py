@@ -25,7 +25,7 @@ with open('../data/test.txt', 'r') as f:
 #Same example, skip blank lines
 with open('../data/test.txt', 'r') as f:
     for line in f:
-        if len(line.strip())  > 0:
+        if len(line.strip())  > 0: # check if it is an empty line
             print(line)
 
 

@@ -47,7 +47,7 @@ def is_prime(x=70):
 def find_all_primes(x=22):
     """Find all the primes up to x."""
     allprimes = []
-    for i in range(2, x + 1):
+    for i in range(2, x + 1): # a range from 2 to x
         if is_prime(i): # check if x is prime
             allprimes.append(i) # append prime
     print("There are %d primes between 2 and %d" % (len(allprimes), x))

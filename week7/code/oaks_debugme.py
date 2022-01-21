@@ -49,12 +49,12 @@ def main(argv):
     g = open('../data/JustOaksData.csv','w') # save a .csv file
     taxa = csv.reader(f) # return a _csv.reader object
     csvwrite = csv.writer(g) # return a _csv.writer object
-    oaks = set()
-    for row in taxa:
+    oaks = set() # Initialize a set
+    for row in taxa: # for every row in taxa
         print(row)
         print ("The genus is: ") 
         print(row[0] + '\n')
-        if is_an_oak(row[0]): # check if the name is matching with 'quercus' case-insensitively.
+        if is_an_oak(row[0]): # check if the name is matching with 'quercus' case-insensitively
             print('FOUND AN OAK!\n')
             csvwrite.writerow([row[0], row[1]]) # write to the csv file
 

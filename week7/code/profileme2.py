@@ -18,9 +18,9 @@ def my_squares(iters):
 def my_join(iters, string):
     
     """Replace the .join with an explicit string concatenation."""
-    out = ''
+    out = '' # Initialize a string
     for i in range(iters):
-        out += ", " + string # concatenate the strings
+        out += ", " + string # concatenate the strings explicitly
     return out
 
 # Define the function run_my_funcs

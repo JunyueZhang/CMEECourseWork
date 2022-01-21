@@ -20,10 +20,10 @@ else
         echo "The file $1 is non-null, let's move on!"
         echo
         echo "Creating a comma delimited version of $1 ..." 
-        path=${1%/*} ## Obtain the path
+        path=${1%/*} # Obtain the path
         #file=${1##*/}
-        file=$0 ## Obtain the filename with extension
-        filename=${file%.*} ## Obtain the filename
+        file=$0 # Obtain the filename with extension
+        filename=${file%.*} # Obtain the filename
         cat $1 | tr -s "\t" "," >> $path/$filename.csv # substitute the tabs in the files with commas and save the output into a .csv file
         echo "Well Done!"
     fi 

@@ -6,7 +6,7 @@
 # Date: Oct 2021
 
 
-file=$1
+file=$1 # $1 is the first argument
 echo "Please enter the correct script name."
 if [ "${file##*.}"x = "tif"x ]; then # check if the file is a .tif file
     if [ ! -f "$file" ]; then # check if the file exists
@@ -21,9 +21,9 @@ if [ "${file##*.}"x = "tif"x ]; then # check if the file is a .tif file
             echo "The file $file is non-null, let's move on!"
             echo
             echo "Converting $file"; 
-            path=${file%/*}  ## Obtain the path
-            FILE=${file##*/} ## Obtain the filename with extension
-            filename=${FILE%.*}  ## Obtain the filename
+            path=${file%/*}  # Obtain the path
+            FILE=${file##*/} # Obtain the filename with extension
+            filename=${FILE%.*}  # Obtain the filename
             convert "$file"  "$(basename "$file" .tif).png" >> $path/$filename.png; # Convert tiff to png
             echo "Completed!"
         fi

@@ -24,7 +24,7 @@ def is_an_oak(name):
 
 ## Using for loops
 oaks_loops = set() # Initialize a set
-for species in taxa:
+for species in taxa: # for every tree in the taxa list
     if is_an_oak(species): # if it is an oak
         oaks_loops.add(species) # add the species name to the set
 print(oaks_loops)
@@ -35,7 +35,7 @@ print(oaks_lc)
 
 ##Get names in UPPER CASE using for loops
 oaks_loops = set() # Initialize a set
-for  species in taxa:
+for  species in taxa: # for every tree in the taxa list
     if is_an_oak(species): # if it is an oak
         oaks_loops.add(species.upper()) # add the species name in upper case to the set
 print(oaks_loops)

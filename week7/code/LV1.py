@@ -45,7 +45,8 @@ RC0 = np.array([R0, C0])
 pops, infodict = integrate.odeint(dCR_dt, RC0, t, full_output=True)
 
 f1 = p.figure() # open an empty figure f1
-p.plot(t, pops[:,0], 'g-', label='Resource density') # Plot
+## Plot the figure
+p.plot(t, pops[:,0], 'g-', label='Resource density') 
 p.plot(t, pops[:,1]  , 'b-', label='Consumer density')
 p.grid()
 p.legend(loc='best')
@@ -54,13 +55,14 @@ p.ylabel('Population density')
 p.title('Consumer-Resource population dynamics')
 
 f2 = p.figure() # open an empty figure f2
-p.plot(pops[:,0], pops[:,1], 'r-') # Plot
+## Plot the figure
+p.plot(pops[:,0], pops[:,1], 'r-') 
 p.grid()
 p.xlabel('Resource density')
 p.ylabel('Consumer density')
 p.title('Consumer-Resource population dynamics')
 
-pp = PdfPages('../results/LV_model.pdf')
+pp = PdfPages('../results/LV_model.pdf') # open a pdf file
 pp.savefig(f1) # Save the figure f1
 pp.savefig(f2) # Save the figure f2
-pp.close()
+pp.close() # close the file
