@@ -2,8 +2,7 @@
 ## Brief description
 The week2 directory is organized with code, data, results, sandbox, README.md, and .gitignore. There are a few data files downloaded from the [TheMulQuaBio repository](https://github.com/mhasoba/TheMulQuaBio) in the data directory. 
 The sandbox directory includes several test files.
-The code directory contains a number of important python scripts for the practicals in [Python I chapter](https://mhasoba.github.io/TheMulQuaBio/notebooks/05-Python_I.html#practicals).
-There are some python packages needed to be imported to run the scripts: pickle, csv, sys, and doctest.
+The code directory contains a number of important python scripts for the practicals in [Python I chapter](https://mhasoba.github.io/TheMulQuaBio/notebooks/05-Python_I.html#practicals).  **There are some python packages needed to be imported to run the scripts: pickle, csv, sys, and doctest.**
 
 ## Languages
 The language used in week2 is python.
@@ -38,9 +37,7 @@ The week2 part includes code, data, results, sandbox. There are some python scri
 + The script MyExampleScript.py shows an example of writing code into a script and running it instead of pasting or sending code to the Python command prompt.
 + The script basic_csv.py reads a file containing 'Species','Infraorder','Family','Distribution','Body mass male (Kg)' and writes a file containing only species name and Body mass.
 + The script align_seqs_fasta.py takes any two fasta sequences (in separate files) to be aligned as input.
-+ The script align_seqs_better.py records and saves all the equally-best alignments.
-
-All the scripts can be easily run with the python command and correct script name.
++ The script align_seqs_better.py records and saves all the equally-best alignments.  All the scripts can be easily run with the python command and correct script name.
 
 ## Author name and contact
 Junyue Zhang  jz1621@ic.ac.uk

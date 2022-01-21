@@ -2,7 +2,7 @@
 ## Brief description
 The week6 directory is organized with code, data, results, and sandbox. There are some data files in the data directory. 
 The sandbox directory and results directory are used to store test scripts and results for the scripts in the code directory, respectively.
-The code directory contains seven important R-scripts about Genomics and Bioinformatics.
+The code directory contains seven important R-scripts about **Genomics and Bioinformatics**.
 Before running the scripts, vegan and ggplot2 packages are requested to be installed.
 
 ## Languages
@@ -23,9 +23,7 @@ The week6 part includes code, data, results, and sandbox. There are seven R scri
 + The example_04.R script is for the practical on population subdivision and demographic inferences.
 + The coalescence.R script is about the probability distribution of TMRCA.
 + The lectures_drift_mutation.R script is about genetic drift and mutations.
-+ The TeachingScript.R script is a teaching script.
-
-All the scripts can be easily run with the source command and the correct script name.
++ The TeachingScript.R script is a teaching script.  All the scripts can be easily run with the source command and the correct script name.
 
 ## Author name and contact
 Junyue Zhang  jz1621@ic.ac.uk
